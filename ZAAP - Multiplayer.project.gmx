@@ -8,6 +8,25 @@
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <scripts name="Events">
+      <script>scripts\Event_On_Player_Create.gml</script>
+      <script>scripts\Event_On_Host_Create.gml</script>
+      <script>scripts\Event_On_Asteroid_Create.gml</script>
+    </scripts>
+    <scripts name="Network">
+      <script>scripts\Client_Get_Packet.gml</script>
+      <script>scripts\Host_Get_Packet.gml</script>
+      <script>scripts\Client_Send_Packet.gml</script>
+      <script>scripts\Host_Send_Packet.gml</script>
+    </scripts>
+    <script>scripts\Define.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\Host</object>
+    <object>objects\object1</object>
+    <object>objects\Asteroid</object>
+  </objects>
   <help>
     <rtf>help.rtf</rtf>
   </help>
