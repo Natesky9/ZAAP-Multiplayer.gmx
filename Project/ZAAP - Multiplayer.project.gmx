@@ -4,15 +4,25 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\bong</sound>
+    <sound>sound\ding</sound>
+  </sounds>
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Events">
-      <script>scripts\Event_On_Player_Create.gml</script>
-      <script>scripts\Event_On_Host_Create.gml</script>
-      <script>scripts\Event_On_Asteroid_Create.gml</script>
+      <scripts name="Create">
+        <script>scripts\Event_On_Asteroid_Create.gml</script>
+        <script>scripts\Event_On_Engine_Create.gml</script>
+        <script>scripts\Event_On_Player_Create.gml</script>
+      </scripts>
+      <scripts name="Draw">
+        <script>scripts\Event_Draw_Engine_Unfocused.gml</script>
+        <script>scripts\Event_Draw_Engine_Focused.gml</script>
+        <script>scripts\Event_Draw_Engine_Button.gml</script>
+      </scripts>
     </scripts>
     <scripts name="Network">
       <script>scripts\Client_Get_Packet.gml</script>
@@ -21,12 +31,30 @@
       <script>scripts\Host_Send_Packet.gml</script>
     </scripts>
     <script>scripts\Define.gml</script>
+    <script>scripts\Event_Left_Pressed.gml</script>
+    <script>scripts\Find_Button.gml</script>
+    <script>scripts\Event_Left_Released.gml</script>
+    <script>scripts\Button_Do.gml</script>
+    <script>scripts\play.gml</script>
+    <script>scripts\Event_Right_Pressed.gml</script>
+    <script>scripts\Event_Step_Engine.gml</script>
+    <script>scripts\Event_Right_Released.gml</script>
+    <scripts name="Buttons">
+      <script>scripts\Menu_Button_1.gml</script>
+      <script>scripts\Menu_Button_2.gml</script>
+      <script>scripts\Menu_Button_3.gml</script>
+      <script>scripts\Menu_Button_4.gml</script>
+      <script>scripts\Menu_Button_5.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\Host</object>
-    <object>objects\object1</object>
+    <object>objects\Engine</object>
     <object>objects\Asteroid</object>
+    <object>objects\Player</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
