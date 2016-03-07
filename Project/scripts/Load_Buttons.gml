@@ -1,4 +1,4 @@
-ini_open("Menu_Buttons.ini");
+ini_open(working_directory + "\Menu_Buttons.ini");
 
 var i = 1;
 while ini_read_real("available","Button" + string(i),false)

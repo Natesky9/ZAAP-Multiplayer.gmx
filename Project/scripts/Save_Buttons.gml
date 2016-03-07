@@ -1,4 +1,4 @@
-ini_open("Menu_Buttons.ini");
+ini_open(working_directory + "\Menu_Buttons.ini");
 
 for (i = 1;i <=ds_list_size(buttons);i += 1)
     {
@@ -35,5 +35,4 @@ for (i = 1;i <=ds_list_size(buttons);i += 1)
     }
 ini_close()
 show_debug_message("Saving Buttons!")
-ini_open("Menu_Buttons.ini")
-ini_close()
+
