@@ -31,11 +31,14 @@
     <scripts name="Buttons">
       <script>scripts\Button_Do.gml</script>
       <script>scripts\Find_Button.gml</script>
+      <script>scripts\Save_Buttons.gml</script>
+      <script>scripts\Load_Buttons.gml</script>
       <script>scripts\Menu_Button_1.gml</script>
       <script>scripts\Menu_Button_2.gml</script>
       <script>scripts\Menu_Button_3.gml</script>
       <script>scripts\Menu_Button_4.gml</script>
       <script>scripts\Menu_Button_5.gml</script>
+      <script>scripts\Menu_Button_6.gml</script>
     </scripts>
     <scripts name="Network">
       <script>scripts\Client_Get_Packet.gml</script>
@@ -51,11 +54,8 @@
     </scripts>
     <scripts name="Helper Scripts">
       <script>scripts\play.gml</script>
+      <script>scripts\show.gml</script>
     </scripts>
-    <script>scripts\Load_Buttons.gml</script>
-    <script>scripts\Save_Buttons.gml</script>
-    <script>scripts\show.gml</script>
-    <script>scripts\Menu_Button_6.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Engine</object>
