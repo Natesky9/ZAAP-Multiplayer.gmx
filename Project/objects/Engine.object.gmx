@@ -194,6 +194,7 @@ else
           <argument>
             <kind>1</kind>
             <string>mode = "Menu"
+
 </string>
           </argument>
         </arguments>

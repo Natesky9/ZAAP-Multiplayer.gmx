@@ -12,6 +12,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\Define.gml</script>
     <scripts name="Events">
       <scripts name="Create">
         <script>scripts\Event_On_Asteroid_Create.gml</script>
@@ -23,6 +24,18 @@
         <script>scripts\Event_Draw_Engine_Focused.gml</script>
         <script>scripts\Event_Draw_Engine_Button.gml</script>
       </scripts>
+      <scripts name="Step">
+        <script>scripts\Event_Step_Engine.gml</script>
+      </scripts>
+    </scripts>
+    <scripts name="Buttons">
+      <script>scripts\Button_Do.gml</script>
+      <script>scripts\Find_Button.gml</script>
+      <script>scripts\Menu_Button_1.gml</script>
+      <script>scripts\Menu_Button_2.gml</script>
+      <script>scripts\Menu_Button_3.gml</script>
+      <script>scripts\Menu_Button_4.gml</script>
+      <script>scripts\Menu_Button_5.gml</script>
     </scripts>
     <scripts name="Network">
       <script>scripts\Client_Get_Packet.gml</script>
@@ -30,22 +43,19 @@
       <script>scripts\Client_Send_Packet.gml</script>
       <script>scripts\Host_Send_Packet.gml</script>
     </scripts>
-    <script>scripts\Define.gml</script>
-    <script>scripts\Event_Left_Pressed.gml</script>
-    <script>scripts\Find_Button.gml</script>
-    <script>scripts\Event_Left_Released.gml</script>
-    <script>scripts\Button_Do.gml</script>
-    <script>scripts\play.gml</script>
-    <script>scripts\Event_Right_Pressed.gml</script>
-    <script>scripts\Event_Step_Engine.gml</script>
-    <script>scripts\Event_Right_Released.gml</script>
-    <scripts name="Buttons">
-      <script>scripts\Menu_Button_1.gml</script>
-      <script>scripts\Menu_Button_2.gml</script>
-      <script>scripts\Menu_Button_3.gml</script>
-      <script>scripts\Menu_Button_4.gml</script>
-      <script>scripts\Menu_Button_5.gml</script>
+    <scripts name="Mouse">
+      <script>scripts\Event_Left_Pressed.gml</script>
+      <script>scripts\Event_Left_Released.gml</script>
+      <script>scripts\Event_Right_Pressed.gml</script>
+      <script>scripts\Event_Right_Released.gml</script>
     </scripts>
+    <scripts name="Helper Scripts">
+      <script>scripts\play.gml</script>
+    </scripts>
+    <script>scripts\Load_Buttons.gml</script>
+    <script>scripts\Save_Buttons.gml</script>
+    <script>scripts\show.gml</script>
+    <script>scripts\Menu_Button_6.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Engine</object>
