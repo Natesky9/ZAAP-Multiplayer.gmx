@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var name = argument0
+=======
+ini_open(working_directory + "\Menu_Buttons.ini");
+>>>>>>> master
 
 ini_open(name + ".ini")
 
