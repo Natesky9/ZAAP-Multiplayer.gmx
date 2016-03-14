@@ -1,12 +1,13 @@
-//create menu button 1
+//create Back Button
 var button = ds_map_create()
 ds_map_add(button,"color",c_orange)
-ds_map_add(button,"text","Join")
+ds_map_add(button,"text","Back")
 ds_map_add(button,"text_color",c_black)
 ds_map_add(button,"pressed",false)
-ds_map_add(button,"function","Client")
+ds_map_add(button,"function","Back")
 ds_map_add(button,"x1",200)
 ds_map_add(button,"x2",300)
 ds_map_add(button,"y1",0)
 ds_map_add(button,"y2",64)
-ds_list_add(buttons,button)
+ds_list_add(main_menu,button)
+console("Creating Client Button")

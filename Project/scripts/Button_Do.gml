@@ -1,31 +1,23 @@
 var get_button = argument0
-var get_do = ds_map_find_value(get_button,"function")
+var done
 
-switch get_do
+if keyboard_check(vk_shift)
     {
-    case "Quit":
-        {
-        play(bong)
-        game_end()
-        exit;
-        }
-    case "Restart":
-        {
-        play(ding)
-        game_restart()
-        exit;
-        }
-    case "Host":
-        {
-        show_debug_message("Creating Server")
-        mode = "Host"
-        exit;
-        }
-    case "Client":
-        {
-        show_debug_message("Loading Client")
-        mode = "Client"
-        exit;
-        }
+    //edit the button
+    var edit_menu = ds_map_find_value(menu_names_to_list,"edit_menu")
+    ds_stack_push(menu_stack,edit_menu)
+    selected_button = get_button
+    var name = ds_map_find_value(selected_button,"text")
+    console("Now editing button named '" + name + "' with value of '" + string(selected_button))
+    exit
     }
-show_debug_message("This button doesn't do anything!")
+
+//find the menu it's pointing to
+done = Button_Do_Menu(get_button)
+show("Button_Do_Menu is " + string(done))
+
+if !done 
+done = Button_Do_Function(get_button)
+show("Button_Do_Function is " + string(done))
+   
+if !done show_debug_message("This button doesn't do anything!")

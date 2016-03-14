@@ -20,9 +20,14 @@
         <script>scripts\Event_On_Player_Create.gml</script>
       </scripts>
       <scripts name="Draw">
-        <script>scripts\Event_Draw_Engine_Unfocused.gml</script>
-        <script>scripts\Event_Draw_Engine_Focused.gml</script>
-        <script>scripts\Event_Draw_Engine_Button.gml</script>
+        <script>scripts\Event_Engine_Draw.gml</script>
+        <scripts name="Engine">
+          <script>scripts\Event_Draw_Engine_Console.gml</script>
+          <script>scripts\Event_Draw_Engine_Button.gml</script>
+          <script>scripts\Event_Draw_Engine_Focused.gml</script>
+          <script>scripts\Event_Draw_Engine_Unfocused.gml</script>
+          <script>scripts\Event_Draw_Engine_Edit_Menu.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Step">
         <script>scripts\Event_Step_Engine.gml</script>
@@ -30,6 +35,8 @@
     </scripts>
     <scripts name="Buttons">
       <script>scripts\Button_Do.gml</script>
+      <script>scripts\Button_Do_Function.gml</script>
+      <script>scripts\Button_Do_Menu.gml</script>
       <script>scripts\Find_Button.gml</script>
       <script>scripts\Save_Buttons.gml</script>
       <script>scripts\Load_Buttons.gml</script>
@@ -39,6 +46,12 @@
       <script>scripts\Menu_Button_4.gml</script>
       <script>scripts\Menu_Button_5.gml</script>
       <script>scripts\Menu_Button_6.gml</script>
+      <script>scripts\Add_Button.gml</script>
+    </scripts>
+    <scripts name="Menus">
+      <script>scripts\menu_destroy.gml</script>
+      <script>scripts\Menu_Jump_Main.gml</script>
+      <script>scripts\menu_create.gml</script>
     </scripts>
     <scripts name="Network">
       <script>scripts\Client_Get_Packet.gml</script>
@@ -56,6 +69,19 @@
       <script>scripts\play.gml</script>
       <script>scripts\show.gml</script>
     </scripts>
+    <scripts name="Config">
+      <script>scripts\Delete_Config.gml</script>
+      <script>scripts\Config_Generate.gml</script>
+      <script>scripts\Config_Load.gml</script>
+      <script>scripts\Config_Add_Menu.gml</script>
+    </scripts>
+    <scripts name="Console">
+      <script>scripts\console.gml</script>
+      <script>scripts\Console_Command.gml</script>
+      <script>scripts\Console_Input.gml</script>
+    </scripts>
+    <script>scripts\is_function.gml</script>
+    <script>scripts\is_menu.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Engine</object>
