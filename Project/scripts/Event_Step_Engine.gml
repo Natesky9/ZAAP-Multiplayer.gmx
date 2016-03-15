@@ -1,3 +1,6 @@
+lifetime += 1
+
+
 if button_right_pressed != -1
     {
     var get_button = button_right_pressed
