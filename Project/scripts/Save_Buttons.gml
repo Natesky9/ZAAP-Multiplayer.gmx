@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 var list = argument0
 var name = ds_map_find_value(menu_names_to_string,list)
 //console("Saving " + name)
 ini_open(name + ".ini");
 for (var i = 0;i < ds_list_size(list);i += 1)
-=======
-ini_open(working_directory + "\Menu_Buttons.ini");
-
-for (i = 1;i <=ds_list_size(buttons);i += 1)
->>>>>>> master
     {
     show("iteration " + string(i))
     var button = ds_list_find_value(list,i);
@@ -42,9 +36,4 @@ for (i = 1;i <=ds_list_size(buttons);i += 1)
     ini_write_real("Button" + string(i),'y2',button_y2);
     }
 ini_close()
-<<<<<<< HEAD
 //show_debug_message("Saving Buttons!")
-=======
-show_debug_message("Saving Buttons!")
-
->>>>>>> master

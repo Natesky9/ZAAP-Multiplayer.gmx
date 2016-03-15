@@ -11,5 +11,7 @@ This is (currently) version .04
 
 # What has been added:
 //----------------------------------------------------//
--Nothing, yet
+-Dynamic Menu system
+-Customizable buttons and buttons that are saved
+-command-line interface for help and commands
 //----------------------------------------------------//
