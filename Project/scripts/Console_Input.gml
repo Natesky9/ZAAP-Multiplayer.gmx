@@ -25,8 +25,6 @@ if string_pos("/",text) == 1
     console(function_argument)
     console("----")
     //end displaying the function
-    
-    
-    
+
     Console_Command(function,function_argument)
     }

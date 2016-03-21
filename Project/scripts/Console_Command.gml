@@ -4,11 +4,13 @@ var command_argument = argument1
 
 switch command
     {
+    //----------------------------------------------------------------//
     case "clear":
         {
         ds_list_clear(console_text)
         exit
         }
+    //----------------------------------------------------------------//
     case "menu_create":
         {
         if command_argument == "" 
@@ -29,15 +31,17 @@ switch command
                 {
                 menu_create(command_argument)
                 var get_list = ds_map_find_value(menu_names_to_list,command_argument)
-                Config_Add_Menu(get_list)
+                Config_Save_Menu(get_list)
                 exit
                 }
             }
         }
+    //----------------------------------------------------------------//
     case "list":
         {
         switch command_argument
             {
+            //------------------------------------------------//
             case "menu":
                 {
                 console("Listing all menus:")
@@ -50,6 +54,7 @@ switch command
                 console("Done listing all menus")
                 exit
                 }
+            //------------------------------------------------//
             case "command":
                 {
                 console("Listing all commands:")
@@ -61,6 +66,7 @@ switch command
                 console("Done listing all commands")
                 exit
                 }
+            //------------------------------------------------//
             case "function":
                 {
                 console("listing all functions:")
@@ -72,16 +78,44 @@ switch command
                 console("Done listing all functions")
                 exit
                 }
-            default:
+            //------------------------------------------------//
+            case "kind":
                 {
-                console("Arguments are: menu, command, function")
+                console("Listing all kinds of buttons")
+                for (i = 0;i < ds_list_size(kind_list);i += 1)
+                    {
+                    var get_kind = ds_list_find_value(kind_list,i)
+                    console(get_kind)
+                    }
+                console("Done listing all kinds of buttons")
                 exit
                 }
+            //------------------------------------------------//
+            default:
+                {
+                console("Arguments are: menu, command, function, kind")
+                exit
+                }
+            //------------------------------------------------//
             }
-
         }
+    //----------------------------------------------------------------//
+    case "edit_pause_text":
+        {
+        if argument1 == ""
+            {
+            console("Type something first!")
+            }
+        else
+            {
+            pause_menu = argument1
+            }
+        exit
+        }
+    //----------------------------------------------------------------//
     default:
         {
         console("This is not a valid command!")
         }
+    //----------------------------------------------------------------//
     }

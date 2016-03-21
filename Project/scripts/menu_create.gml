@@ -12,3 +12,5 @@ console("Creating menu named '" + name + "'")
 show("Created menu named: " + name + " with list value of: " + string(menu))
 
 ds_list_add(menu_list,menu);
+
+return menu

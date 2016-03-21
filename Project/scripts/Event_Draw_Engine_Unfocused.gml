@@ -1,7 +1,7 @@
 //draw the engine when the game is not in focus
 //----------------------------------------------------------------//
 
-text = "Game is Paused"
+text = pause_menu
 
 text_width = string_width(text)
 text_height = string_height(text)
