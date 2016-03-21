@@ -19,11 +19,17 @@ while ini_section_exists("Button" + string(i)) //ini_read_real("available","Butt
     var button_text_color = ini_read_real("Button" + string(i),"text_color",c_black);
     ds_map_add(button,"text_color",button_text_color)
     
+    var button_kind = ini_read_string("Button" + string(i),"kind","action")
+    ds_map_add(button,"kind",button_kind)
+    
     var button_pressed = ini_read_real("Button" + string(i),"pressed",false);
     ds_map_add(button,"pressed",button_pressed)//unnecesary
     
     var button_function = ini_read_string("Button" + string(i),"function","Quit");
     ds_map_add(button,"function",button_function)
+    
+    var button_value = ini_read_string("Button" + string(i),"value","")
+    ds_map_add(button,"value",button_value)
     
     var button_x1 = ini_read_real("Button" + string(i),"x1",0);
     ds_map_add(button,"x1",button_x1)

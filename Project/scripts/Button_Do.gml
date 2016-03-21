@@ -1,23 +1,42 @@
 var get_button = argument0
 var done
 
-if keyboard_check(vk_shift)
+var kind = ds_map_find_value(get_button,"kind")
+
+switch kind
     {
-    //edit the button
-    var edit_menu = ds_map_find_value(menu_names_to_list,"edit_menu")
-    ds_stack_push(menu_stack,edit_menu)
-    selected_button = get_button
-    var name = ds_map_find_value(selected_button,"text")
-    console("Now editing button named '" + name + "' with value of '" + string(selected_button))
-    exit
+    case "action":
+        {
+        //find the menu it's pointing to
+        done = Button_Do_Menu(get_button)
+        show("Button_Do_Menu is " + string(done))
+        
+        if !done 
+        done = Button_Do_Function(get_button)
+        show("Button_Do_Function is " + string(done))
+           
+        if !done
+            {//if nothing is found
+            show_debug_message("This button doesn't do anything!")
+            console("Shift-Click to edit")
+            }
+        exit
+        }
+    case "field":
+        {
+        if field_focus == get_button
+            {
+            field_focus = -1
+            Button_Do_Function(get_button)
+            }
+        else
+            {
+            field_focus = get_button
+            ds_map_replace(get_button,"value","")
+            }
+        var value = ds_map_find_value(get_button,"value")
+        keyboard_string = value
+        exit
+        }
     }
 
-//find the menu it's pointing to
-done = Button_Do_Menu(get_button)
-show("Button_Do_Menu is " + string(done))
-
-if !done 
-done = Button_Do_Function(get_button)
-show("Button_Do_Function is " + string(done))
-   
-if !done show_debug_message("This button doesn't do anything!")

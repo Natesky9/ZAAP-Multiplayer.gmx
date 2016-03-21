@@ -40,12 +40,6 @@
       <script>scripts\Find_Button.gml</script>
       <script>scripts\Save_Buttons.gml</script>
       <script>scripts\Load_Buttons.gml</script>
-      <script>scripts\Menu_Button_1.gml</script>
-      <script>scripts\Menu_Button_2.gml</script>
-      <script>scripts\Menu_Button_3.gml</script>
-      <script>scripts\Menu_Button_4.gml</script>
-      <script>scripts\Menu_Button_5.gml</script>
-      <script>scripts\Menu_Button_6.gml</script>
       <script>scripts\Add_Button.gml</script>
     </scripts>
     <scripts name="Menus">
@@ -73,7 +67,7 @@
       <script>scripts\Delete_Config.gml</script>
       <script>scripts\Config_Generate.gml</script>
       <script>scripts\Config_Load.gml</script>
-      <script>scripts\Config_Add_Menu.gml</script>
+      <script>scripts\Config_Save_Menu.gml</script>
     </scripts>
     <scripts name="Console">
       <script>scripts\console.gml</script>
@@ -82,6 +76,11 @@
     </scripts>
     <script>scripts\is_function.gml</script>
     <script>scripts\is_menu.gml</script>
+    <script>scripts\Server_Create.gml</script>
+    <script>scripts\Event_Draw_Engine_Button_Action.gml</script>
+    <script>scripts\Event_Draw_Engine_Button_Field.gml</script>
+    <script>scripts\Event_Key_Pressed.gml</script>
+    <script>scripts\button_search_value.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Engine</object>
