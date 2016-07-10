@@ -18,6 +18,24 @@ switch packet_type
     case packet.entity_asteroid_load:
         {packet_entity_asteroid_load(async_packet);exit}
 //--------------------------------//
+    case packet.entity_ship_action:
+        {packet_entity_ship_action(async_packet);exit}
+//--------------------------------//
+    case packet.entity_ship_create:
+        {packet_entity_ship_create(async_packet);exit}
+//--------------------------------//
+    case packet.entity_ship_destroy:
+        {packet_entity_ship_destroy(async_packet);exit}
+//--------------------------------//
+    case packet.entity_ship_load:
+        {packet_entity_ship_load(async_packet);exit}
+//--------------------------------//
+    case packet.entity_ship_set_control:
+        {packet_entity_ship_set_control(async_packet);exit}
+//--------------------------------//
+    case packet.entity_ship_update:
+        {packet_entity_ship_update(async_packet);exit}
+//--------------------------------//
     case packet.kick:
         {packet_kick(async_packet);exit}
 //--------------------------------//
@@ -35,6 +53,9 @@ switch packet_type
 //--------------------------------//
     case packet.sss_load:
         {packet_sss_load(async_packet);exit}
+//--------------------------------//
+    case packet.player_request_entity_control:
+        {packet_player_request_entity_control(async_packet);exit}
 //--------------------------------//
     case packet.sss_remove:
         {packet_sss_remove(async_packet)exit}

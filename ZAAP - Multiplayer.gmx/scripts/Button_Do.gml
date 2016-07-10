@@ -17,7 +17,7 @@ switch kind
            
         if !done
             {//if nothing is found
-            show_debug_message("This button doesn't do anything!")
+            show("This button doesn't do anything!")
             console("Shift-Click to edit")
             }
         exit

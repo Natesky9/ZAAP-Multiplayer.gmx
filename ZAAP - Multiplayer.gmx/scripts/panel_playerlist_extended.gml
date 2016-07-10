@@ -2,10 +2,10 @@ var players = ds_list_size(playerlist)
 var mode = ds_stack_top(menu_stack)
 var xoff
 
-panel_playerlist_x1 = 0
-panel_playerlist_y1 = 0
-panel_playerlist_x2 = 192
-panel_playerlist_y2 = max(32*players,64)
+panel_playerlist_x1 = view_xview[0]
+panel_playerlist_y1 = view_yview[0]
+panel_playerlist_x2 = view_xview[0]+192
+panel_playerlist_y2 = view_yview[0]+max(32*players,64)
 
 //draw the background
 draw_set_color(c_teal)
@@ -24,23 +24,27 @@ for (i = 0;i < players;i += 1)
             {
             xoff = 32
             draw_set_color(c_lime)
-            draw_rectangle(0 + xoff,32*i + 8,192,32*i + 24,false)
+            draw_rectangle(view_xview[0] + xoff,view_yview[0]+32*i + 8,
+                view_xview[0]+192,view_yview[0]+32*i + 24,false)
             draw_set_color(c_red)
-            panel_playerlist_kick_icon(0,32*i,32,32*i+32)
+            panel_playerlist_kick_icon(view_xview[0],view_yview[0]+32*i,
+                view_xview[0]+32,view_yview[0]+32*i+32)
             
             }
         if mode == "Client_Window"
             {
             xoff = 0
             draw_set_color(c_lime)
-            draw_rectangle(0,32*i + 8,192,32*i + 24,false)
+            draw_rectangle(view_xview[0],view_yview[0]+32*i + 8,
+                view_xview[0]+192,view_yview[0]+32*i + 24,false)
             }
         }
     else
         {
         xoff = 0
         draw_set_color(c_green)
-        draw_rectangle(0,32*i + 8,192,32*i + 24,false)
+        draw_rectangle(view_xview[0],view_yview[0]+32*i + 8,
+            view_xview[0]+192,view_yview[0]+32*i + 24,false)
         }
     
     
@@ -56,9 +60,9 @@ for (i = 0;i < players;i += 1)
         draw_set_color(c_ltgray)
         }
     var text = "Player[" + string(get_sss) + "]"
-    draw_text(0 + xoff,32*i+16,text)
+    draw_text(view_xview[0] + xoff,view_yview[0]+32*i+16,text)
     var text = "Ping: " + string(ds_map_find_value(get_player,"Ping"))
-    draw_text(112,32*i+16,text)
+    draw_text(view_xview[0]+112,view_yview[0]+32*i+16,text)
     }
 
 //draw the background border

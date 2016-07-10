@@ -55,7 +55,7 @@ switch get_function
     //----------------------------------------------------------------//
     case "Host":
         {
-        show_debug_message("Creating Server")
+        show("Creating Server")
         ds_stack_push(menu_stack,"Server_Window")
         Server_Create()
         return true
@@ -63,7 +63,7 @@ switch get_function
     //----------------------------------------------------------------//
     case "Client_Join":
         {
-        show_debug_message("Loading Client")
+        show("Loading Client")
         var ip = button_search_value("Address")
         if is_ip(ip)
             {

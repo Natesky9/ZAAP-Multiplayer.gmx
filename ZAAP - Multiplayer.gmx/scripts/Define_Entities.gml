@@ -2,4 +2,7 @@
 enum entity
     {
     asteroid,
+    ship,
+    station,
+    vortex,
     }

@@ -22,7 +22,7 @@ switch mode
             }
         else
             {
-            Packet_Write(packet.entity_asteroid_create,mouse_x,mouse_y,entity.asteroid)
+            Packet_Write(packet.entity_asteroid_create,mouse_x,mouse_y)
             exit
             }
         exit

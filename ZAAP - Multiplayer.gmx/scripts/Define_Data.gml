@@ -1,5 +1,6 @@
 enum data
     {
+    null,
     packet_mode,
     packet_sss,
     packet_type,
@@ -8,6 +9,8 @@ enum data
     arg_3,
     arg_4,
     arg_5,
+    arg_6,
+    arg_7,
     all_connected,
     read,
     write,

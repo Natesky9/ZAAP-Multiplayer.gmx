@@ -10,6 +10,10 @@ switch mode
             entity_destroy_asteroid(get_instance)
             Packet_Write(packet.entity_asteroid_destroy,get_instance)
             }
+        if is_undefined(get_instance)
+            {
+            //console("ERROR_Server")
+            }
         exit
         }
     case "Client_Window":
@@ -19,6 +23,10 @@ switch mode
             {
             var get_instance = ds_map_find_value(get_instance,"ssn")
             Packet_Write(packet.entity_asteroid_destroy,get_instance)
+            }
+        if is_undefined(get_instance)
+            {
+            //console("ERROR_Client")
             }
         exit
         }

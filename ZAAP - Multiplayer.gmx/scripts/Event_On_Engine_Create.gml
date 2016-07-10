@@ -9,6 +9,7 @@ field_focus = -1
 network_set_config(network_config_connect_timeout,1000)
 Ping = -1
 SSS = -1
+Ship_Control = -1
 
 pause_menu = "Game is Paused"
 Config_Load()
@@ -17,3 +18,6 @@ Menu_Jump_Main()
 //end pushing main menu
 button_left_pressed = -1
 button_right_pressed = -1
+console("============")
+console("version .059")
+console("============")

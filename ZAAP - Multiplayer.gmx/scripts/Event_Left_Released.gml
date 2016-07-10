@@ -4,12 +4,10 @@ switch mode
     {
     case "Server_Window":
         {
-        console("Nothing here yet")
         exit
         }
     case "Client_Window":
         {
-        console("Sorry, not implimented!")
         exit
         }
     default:

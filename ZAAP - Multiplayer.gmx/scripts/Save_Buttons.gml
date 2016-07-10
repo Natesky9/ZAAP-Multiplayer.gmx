@@ -43,4 +43,3 @@ for (var i = 0;i < ds_list_size(list);i += 1)
     ini_write_real("Button" + string(i),"y2",button_y2);
     }
 ini_close()
-//show_debug_message("Saving Buttons!")

@@ -1,4 +1,5 @@
 Event_Draw_Entity()
+Event_Draw_Sketch()
 Event_Draw_Engine_Console()
 
 var mode = ds_stack_top(menu_stack)
@@ -11,6 +12,9 @@ if window_has_focus()
             {
             Event_Draw_Engine_Client();
             Event_Draw_Playerlist()
+            Event_Draw_Ship_GUI()
+            Event_Draw_Nearby_Ships()
+            
             break;
             }
         case "Server_Window":
@@ -45,3 +49,9 @@ else
         }
     }
 //draw the text console
+
+//draw the grid
+
+draw_set_color(c_black)
+draw_line(-6400,0,6400,0)
+draw_line(0,-6400,0,6400)

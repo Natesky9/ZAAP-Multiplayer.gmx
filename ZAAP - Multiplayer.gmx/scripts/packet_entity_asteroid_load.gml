@@ -15,6 +15,9 @@ switch packet_mode
             var new_entity = entity_create(entity.asteroid,get_x,get_y)
             //
             ds_map_add(new_entity,"ssn",get_ssn)
+            //console("Added object: " + string(new_entity))
+            //console("Added ssn: " + string(get_ssn))
+            //console("Assigning object to ssn")
             ds_map_add(ssn_map,get_ssn,new_entity)
             }
         //
@@ -24,7 +27,6 @@ switch packet_mode
 //--------------------------------//
     case data.client_write:
         {
-        client_send_packet()
         exit
         }
 //================================//

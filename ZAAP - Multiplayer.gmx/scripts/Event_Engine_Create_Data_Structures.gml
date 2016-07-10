@@ -53,3 +53,9 @@ async_packet = 0
 entity_asteroid_list = ds_list_create()
 entity_ship_list = ds_list_create()
 entity_station_list = ds_list_create()
+entity_vortex_list = ds_list_create()
+
+entity_ship_controllers = ds_map_create()
+entity_station_controllers = ds_map_create()
+
+sketch_list = ds_list_create()
