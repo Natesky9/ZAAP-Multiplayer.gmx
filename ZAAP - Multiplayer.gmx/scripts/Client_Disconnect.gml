@@ -1,0 +1,11 @@
+//completely disconnect from a server
+network_destroy(client_socket)
+ds_stack_pop(menu_stack)
+ds_list_clear(playerlist)
+ds_list_clear(entity_asteroid_list)
+ds_list_clear(entity_ship_list)
+ds_list_clear(entity_station_list)
+ds_map_destroy(ssn_map)
+ssn_map = ds_map_create()
+ds_map_destroy(sss_map)
+sss_map = ds_map_create()
