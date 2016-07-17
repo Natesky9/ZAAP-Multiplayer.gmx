@@ -1,4 +1,4 @@
-var async_packet = argument[0]
+var async_packet = argument0
 
 show("Packet mode is now " + string(async_packet[data.packet_mode]));
 var packet_type = Packet_Prepare(async_packet)
@@ -35,6 +35,15 @@ switch packet_type
 //--------------------------------//
     case packet.entity_ship_update:
         {packet_entity_ship_update(async_packet);exit}
+//--------------------------------//
+    case packet.entity_vortex_create:
+        {packet_entity_vortex_create(async_packet);exit}
+//--------------------------------//
+    case packet.entity_vortex_destroy:
+        {packet_entity_vortex_destroy(async_packet);exit}
+//--------------------------------//
+    case packet.entity_vortex_load:
+        {packet_entity_vortex_load(async_packet);exit}
 //--------------------------------//
     case packet.kick:
         {packet_kick(async_packet);exit}

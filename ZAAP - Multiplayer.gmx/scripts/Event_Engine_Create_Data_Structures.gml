@@ -1,8 +1,8 @@
 //Create the Engine's Data Sturctures
 //--------------------------------//
 menu_list = ds_list_create()
-menu_names_to_string = ds_map_create()
-menu_names_to_list = ds_map_create()
+menu_names_to_string = create_map()
+menu_names_to_list = create_map()
 menu_stack = ds_stack_create()
 //--------------------------------//
 console_text = ds_list_create()
@@ -41,8 +41,8 @@ ds_list_add(kind_list,"field")
 //ds_list_add(kind_list,"toggle")
 //--------------------------------//
 //Networking
-ssn_map = ds_map_create()
-sss_map = ds_map_create()
+ssn_map = create_map()
+sss_map = create_map()
 playerlist = ds_list_create()
 client_bin = buffer_create(1024,buffer_fixed,1)
 client_bout = buffer_create(1024,buffer_fixed,1)
@@ -55,7 +55,7 @@ entity_ship_list = ds_list_create()
 entity_station_list = ds_list_create()
 entity_vortex_list = ds_list_create()
 
-entity_ship_controllers = ds_map_create()
-entity_station_controllers = ds_map_create()
+entity_ship_controllers = create_map()
+entity_station_controllers = create_map()
 
 sketch_list = ds_list_create()

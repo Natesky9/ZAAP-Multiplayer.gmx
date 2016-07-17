@@ -11,7 +11,7 @@ switch packet_mode
             {
             var get_sss = buffer_read(client_bin,buffer_u8)
             ds_list_add(playerlist,get_sss)
-            var get_player = ds_map_create()
+            get_player = create_map()
             ds_map_add(sss_map,get_sss,get_player)
             ds_map_add(get_player,"sss",get_sss)
             var get_Ping = buffer_read(client_bin,buffer_u8)

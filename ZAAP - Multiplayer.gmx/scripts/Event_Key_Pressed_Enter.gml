@@ -7,11 +7,12 @@ if field_focus == -1
 if field_focus == -2
     {
     field_focus = -1
+    if keyboard_string != ""
     Console_Input()
     keyboard_string = ""
     }
 
-else
+if field_focus > 0
     {
     Button_Do(field_focus)
     field_focus = -1

@@ -14,6 +14,7 @@
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
     <sprite>sprites\spr_ship</sprite>
+    <sprite>sprites\spr_vortex</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -32,12 +33,21 @@
         <script>scripts\Event_Engine_Create_Data_Structures.gml</script>
         <script>scripts\Event_Game_End.gml</script>
         <script>scripts\Event_Create_Entity_Asteroid.gml</script>
+        <script>scripts\Event_Create_Entity_Vortex.gml</script>
         <script>scripts\Event_Create_Entity_Ship.gml</script>
       </scripts>
       <scripts name="Draw">
         <script>scripts\Event_Draw_Engine.gml</script>
+        <script>scripts\Event_Draw_Sketch.gml</script>
+        <script>scripts\Event_Draw_Ship_GUI.gml</script>
+        <script>scripts\Event_Draw_Sketch_Warp.gml</script>
+        <script>scripts\draw_asteroid_line.gml</script>
         <script>scripts\Event_Draw_Entity.gml</script>
+        <script>scripts\Draw_Vortex.gml</script>
+        <script>scripts\Event_Draw_Nearby_Ships.gml</script>
         <script>scripts\Event_Draw_Playerlist.gml</script>
+        <script>scripts\Draw_Ship.gml</script>
+        <script>scripts\panel_playerlist_extended.gml</script>
         <scripts name="Engine">
           <script>scripts\Event_Draw_Engine_Console.gml</script>
           <script>scripts\Event_Draw_Engine_Focused.gml</script>
@@ -55,6 +65,7 @@
           <script>scripts\Event_Draw_Entity_Asteroid.gml</script>
           <script>scripts\Event_Draw_Entity_Ship.gml</script>
           <script>scripts\Event_Draw_Entity_Station.gml</script>
+          <script>scripts\Event_Draw_Entity_Vortex.gml</script>
         </scripts>
       </scripts>
       <scripts name="Step">
@@ -63,6 +74,9 @@
         <script>scripts\Event_Step_Entity_Client.gml</script>
         <script>scripts\Event_Step_Entity_Server.gml</script>
         <script>scripts\Event_Step_Entity_Ship.gml</script>
+        <script>scripts\Event_Step_Entity_Asteroid.gml</script>
+        <script>scripts\Event_Step_Entity_Vortex.gml</script>
+        <script>scripts\Event_Step_Entity_Motion.gml</script>
       </scripts>
       <scripts name="Mouse">
         <script>scripts\Event_Left_Pressed.gml</script>
@@ -82,10 +96,15 @@
           <script>scripts\Event_Key_Pressed_Enter.gml</script>
           <script>scripts\Event_Key_Pressed_Escape.gml</script>
           <script>scripts\Event_Key_Pressed_Shift.gml</script>
+          <script>scripts\Event_Key_Pressed_Client_Shift.gml</script>
+          <script>scripts\Event_Key_Pressed_Client_S.gml</script>
           <script>scripts\Event_Key_Pressed_A.gml</script>
           <script>scripts\Event_Key_Pressed_D.gml</script>
+          <script>scripts\Event_Key_Pressed_N.gml</script>
+          <script>scripts\Event_Key_Pressed_O.gml</script>
           <script>scripts\Event_Key_Pressed_Q.gml</script>
           <script>scripts\Event_Key_Pressed_S.gml</script>
+          <script>scripts\Event_Key_Pressed_V.gml</script>
           <script>scripts\Event_Key_Pressed_W.gml</script>
         </scripts>
         <scripts name="Released">
@@ -107,6 +126,7 @@
         <scripts name="Client">
           <script>scripts\Client_Connect.gml</script>
           <script>scripts\client_send_packet.gml</script>
+          <script>scripts\Client_Disconnect.gml</script>
         </scripts>
         <scripts name="Server">
           <script>scripts\Server_Create.gml</script>
@@ -124,6 +144,9 @@
           <script>scripts\packet_entity_ship_load.gml</script>
           <script>scripts\packet_entity_ship_set_control.gml</script>
           <script>scripts\packet_entity_ship_update.gml</script>
+          <script>scripts\packet_entity_vortex_create.gml</script>
+          <script>scripts\packet_entity_vortex_destroy.gml</script>
+          <script>scripts\packet_entity_vortex_load.gml</script>
           <script>scripts\packet_kick.gml</script>
           <script>scripts\packet_ping_request.gml</script>
           <script>scripts\packet_ping_tell.gml</script>
@@ -181,22 +204,16 @@
     </scripts>
     <script>scripts\sss_disconnect.gml</script>
     <script>scripts\sss_connect.gml</script>
-    <script>scripts\panel_playerlist_extended.gml</script>
     <script>scripts\panel_playerlist_retracted.gml</script>
     <script>scripts\Create_Panels.gml</script>
-    <script>scripts\Client_Disconnect.gml</script>
     <script>scripts\panel_playerlist_kick_icon.gml</script>
-    <script>scripts\Event_Draw_Ship_GUI.gml</script>
     <script>scripts\Client_Request_Ship_Control.gml</script>
-    <script>scripts\Draw_Ship.gml</script>
     <script>scripts\Draw_Asteroid.gml</script>
-    <script>scripts\Event_Draw_Nearby_Ships.gml</script>
-    <script>scripts\Event_Key_Pressed_V.gml</script>
-    <script>scripts\Event_Key_Pressed_Client_S.gml</script>
     <script>scripts\Get_SSN.gml</script>
-    <script>scripts\Event_Key_Pressed_Client_Shift.gml</script>
     <script>scripts\create_sketch.gml</script>
-    <script>scripts\Event_Draw_Sketch.gml</script>
+    <script>scripts\vector_add.gml</script>
+    <script>scripts\create_map.gml</script>
+    <script>scripts\destroy_map.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Engine</object>

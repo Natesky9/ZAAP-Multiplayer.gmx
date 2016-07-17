@@ -9,13 +9,13 @@ switch packet_mode
         //
         for (i = 0;i < size;i += 1)
             {
-            var get_ssn = buffer_read(client_bin,buffer_u8)
+            var get_entity = buffer_read(client_bin,buffer_u8)
             var get_x = buffer_read(client_bin,buffer_f32)
             var get_y = buffer_read(client_bin,buffer_f32)
             var new_entity = entity_create(entity.ship,get_x,get_y)
             //
-            ds_map_add(new_entity,"ssn",get_ssn)
-            ds_map_add(ssn_map,get_ssn,new_entity)
+            ds_map_add(new_entity,"ssn",get_entity)
+            ds_map_add(ssn_map,get_entity,new_entity)
             }
         //
         console("Loaded all previous ships!")
@@ -42,11 +42,11 @@ switch packet_mode
         
         for (i = 0;i < size;i += 1)
             {
-            var find_ssn = ds_list_find_value(entity_ship_list,i)
-            var get_x = ds_map_find_value(find_ssn,"x")
-            var get_y = ds_map_find_value(find_ssn,"y")
+            var get_entity = ds_list_find_value(entity_ship_list,i)
+            var get_x = ds_map_find_value(get_entity,"x")
+            var get_y = ds_map_find_value(get_entity,"y")
             
-            buffer_write(server_bout,buffer_u8,find_ssn)
+            buffer_write(server_bout,buffer_u8,get_entity)
             buffer_write(server_bout,buffer_f32,get_x)
             buffer_write(server_bout,buffer_f32,get_y)
             //add load functions here

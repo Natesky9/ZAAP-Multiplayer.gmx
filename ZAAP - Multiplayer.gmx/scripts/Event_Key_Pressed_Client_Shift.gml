@@ -1,14 +1,18 @@
+if field_focus == -1
+or field_focus == -2
+    {
+    exit
+    }
+
 if Ship_Control == -1
     {
     console("No warp drive, because no ship!")
     exit
     }
 
-if is_undefined(Ship_Control)
+if Ship_Control != 1
     {
-    console("ERROR, Ship no defined!")
-    exit
+    var get_entity = Get_SSN(Ship_Control)
+    if get_entity
+    Packet_Write(packet.entity_ship_action,get_entity,action.jump_drive)
     }
-
-var get_ssn = Get_SSN(Ship_Control)
-Packet_Write(packet.entity_ship_action,get_ssn,action.jump_drive)
