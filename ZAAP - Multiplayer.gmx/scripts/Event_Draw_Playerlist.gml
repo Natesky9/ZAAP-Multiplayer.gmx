@@ -1,8 +1,8 @@
 
 if keyboard_check(ord('~'))
 or point_in_rectangle(mouse_x,mouse_y,
-view_xview[0]+panel_playerlist_x1,view_yview[0]+panel_playerlist_y1,
-view_xview[0]+panel_playerlist_x2,view_yview[0]+panel_playerlist_y2)
+panel_playerlist_x1,panel_playerlist_y1,
+panel_playerlist_x2,panel_playerlist_y2)
     {
     panel_playerlist_extended()
     }

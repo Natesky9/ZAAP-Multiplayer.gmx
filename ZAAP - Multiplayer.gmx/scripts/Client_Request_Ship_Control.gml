@@ -10,10 +10,10 @@ var is_unpiloted = (ds_map_find_value(nearest_ship,"Controller") == 0)
 
 if is_unpiloted
     {
-    var get_ssn = ds_map_find_value(nearest_ship,"ssn")
+    var get_entity = ds_map_find_value(nearest_ship,"ssn")
     //console("You are currently Controlling: " + string(Ship_Control))
-    Packet_Write(packet.player_request_entity_control,get_ssn,Ship_Control)
-    //console("Attempting to take control of object: " + string(get_ssn))
+    Packet_Write(packet.player_request_entity_control,get_entity,Ship_Control)
+    //console("Attempting to take control of object: " + string(get_entity))
     keyboard_string = ""
     exit
     }

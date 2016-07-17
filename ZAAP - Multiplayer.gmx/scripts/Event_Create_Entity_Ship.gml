@@ -6,9 +6,7 @@ var grid_height = 5
 
 var get_x = argument[0]
 var get_y = argument[1]
-var get_entity = ds_map_create()
-
-//ds_map_add(new_entity,"ssn",get_ssn)
+get_entity = create_map()
 ds_map_add(get_entity,"brake",false)
 ds_map_add(get_entity,"throttle",false)
 ds_map_add(get_entity,"steer",0)

@@ -1,6 +1,5 @@
 //check for button presses
         var get_button = Find_Button()
-        //console("click!")
         if get_button != -1
             {
             show("Clicked: " + string(get_button))

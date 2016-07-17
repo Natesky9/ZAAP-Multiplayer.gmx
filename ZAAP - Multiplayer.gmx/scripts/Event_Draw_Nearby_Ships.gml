@@ -1,4 +1,4 @@
-if keyboard_check(ord('N'))
+if draw_nearby_ships
 && Ship_Control != -1
     {
     if is_undefined(Ship_Control)
@@ -18,7 +18,7 @@ if keyboard_check(ord('N'))
         
         var x1 = ds_map_find_value(get_entity,"x")
         var y1 = ds_map_find_value(get_entity,"y")
-        var get_ssn = ds_map_find_value(get_entity,"ssn")
+        var get_entity = ds_map_find_value(get_entity,"ssn")
         
         var get_dir = point_direction(x_start,y_start,x1,y1)
         
@@ -29,7 +29,7 @@ if keyboard_check(ord('N'))
         draw_set_color(c_blue)
         draw_line(x1,y1,x2,y2)
         //draw the tag
-        var text = "[" + string(get_ssn) + "]"
+        var text = "[" + string(get_entity) + "]"
         var text_height = string_height(text)
         var text_width = string_width(text)
         draw_set_color(c_white)

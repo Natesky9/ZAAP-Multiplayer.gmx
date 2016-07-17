@@ -22,7 +22,8 @@ switch mode
             }
         else
             {
-            Packet_Write(packet.entity_asteroid_create,mouse_x,mouse_y)
+            mouse_vector_x = mouse_x
+            mouse_vector_y = mouse_y
             exit
             }
         exit
@@ -40,7 +41,8 @@ switch mode
             }
         else
             {
-            Packet_Write(packet.entity_asteroid_create,mouse_x,mouse_y,entity.asteroid)
+            mouse_vector_x = mouse_x
+            mouse_vector_y = mouse_y
             exit
             }
         exit

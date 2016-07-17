@@ -45,6 +45,18 @@ switch keyboard_key
         exit
         }
     //--------------------------------//
+    case ord('N'):
+        {
+        Event_Key_Pressed_N()
+        exit
+        }
+    //--------------------------------//
+    case ord('O'):
+        {
+        Event_Key_Pressed_O()
+        exit
+        }
+    //--------------------------------//
     case vk_escape:
         {
         Event_Key_Pressed_Escape()

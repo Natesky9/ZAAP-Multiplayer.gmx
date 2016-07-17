@@ -1,6 +1,7 @@
 //Packet Names
 enum packet
     {
+    null,
     chat_send,
     chat_broadcast,
     entity_asteroid_create,
@@ -13,6 +14,9 @@ enum packet
     entity_ship_position_set,
     entity_ship_set_control,
     entity_ship_update,
+    entity_vortex_create,
+    entity_vortex_destroy,
+    entity_vortex_load,
     kick,
     player_request_entity_control,
     sss_add,

@@ -5,10 +5,10 @@ switch packet_mode
 //--------------------------------//
     case data.client_read:
         {
-        var get_ssn = buffer_read(client_bin,buffer_u32)
+        var get_entity = buffer_read(client_bin,buffer_u32)
         var get_action = buffer_read(client_bin,buffer_u8)
         
-        var get_entity = ds_map_find_value(ssn_map,get_ssn)
+        var get_entity = ds_map_find_value(ssn_map,get_entity)
         
         if is_undefined(get_entity)
             {

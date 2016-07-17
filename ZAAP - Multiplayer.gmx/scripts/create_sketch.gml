@@ -1,4 +1,4 @@
-var new_sketch = ds_map_create()
+new_sketch = create_map()
 ds_list_add(sketch_list,new_sketch)
 //console("created sketch")
 var type = argument[0]

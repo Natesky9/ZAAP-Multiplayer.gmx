@@ -15,6 +15,7 @@ switch (event)
         
         Packet_Write(packet.entity_asteroid_load,new_sss)
         Packet_Write(packet.entity_ship_load,new_sss)
+        Packet_Write(packet.entity_vortex_load,new_sss)
         
         var get_ip = ds_map_find_value(async_load,"ip")
         console("Player connected with ip [" + get_ip + "]")

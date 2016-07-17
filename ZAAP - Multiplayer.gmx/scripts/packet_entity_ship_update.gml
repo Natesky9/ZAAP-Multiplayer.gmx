@@ -5,16 +5,16 @@ switch packet_mode
 //--------------------------------//
     case data.client_read:
         {
-        var get_ssn = buffer_read(client_bin,buffer_u32)
+        var get_entity = buffer_read(client_bin,buffer_u32)
         var get_x = buffer_read(client_bin,buffer_s32)
         var get_y = buffer_read(client_bin,buffer_s32)
         var get_controller = buffer_read(client_bin,buffer_s8)
         var get_direction = buffer_read(client_bin,buffer_f32)
         var get_vector_direction = buffer_read(client_bin,buffer_f32)
         var get_vector_speed = buffer_read(client_bin,buffer_f32)
-        //console("received ssn of " + string(get_ssn))
+        //console("received ssn of " + string(get_entity))
         
-        var get_csn = ds_map_find_value(ssn_map,get_ssn)
+        var get_csn = ds_map_find_value(ssn_map,get_entity)
         
         if is_undefined(get_csn)
             {//OOO error
@@ -35,8 +35,8 @@ switch packet_mode
     case data.client_write:
         {
         var get_csn = async_packet[data.arg_1]
-        var get_ssn = ds_map_find_value(get_csn,"ssn")
-        buffer_write(client_bout,buffer_u32,get_ssn)
+        var get_entity = ds_map_find_value(get_csn,"ssn")
+        buffer_write(client_bout,buffer_u32,get_entity)
         client_send_packet()
         exit
         }

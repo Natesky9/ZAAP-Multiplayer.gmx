@@ -5,9 +5,9 @@ switch packet_mode
 //--------------------------------//
     case data.client_read:
         {
-        var get_ssn = buffer_read(client_bin,buffer_u32)
+        var get_entity = buffer_read(client_bin,buffer_u32)
         var get_controller = buffer_read(client_bin,buffer_s32)
-        var get_csn = ds_map_find_value(ssn_map,get_ssn)
+        var get_csn = ds_map_find_value(ssn_map,get_entity)
         
         if is_undefined(get_csn)
             {//OOO error
@@ -20,7 +20,7 @@ switch packet_mode
             }
 
         ds_map_replace(get_csn,"Controller",get_controller)
-        //console("Ship: " + string(get_ssn) + " is now controlled by: " + string(get_controller))
+        //console("Ship: " + string(get_entity) + " is now controlled by: " + string(get_controller))
         exit
         }
 //--------------------------------//

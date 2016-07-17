@@ -32,7 +32,9 @@ switch kind
         else
             {
             field_focus = get_button
-            ds_map_replace(get_button,"value","")
+            var get_text = ds_map_find_value(get_button,"value")
+            keyboard_string = get_text
+            //ds_map_replace(get_button,"value","")
             }
         var value = ds_map_find_value(get_button,"value")
         keyboard_string = value
