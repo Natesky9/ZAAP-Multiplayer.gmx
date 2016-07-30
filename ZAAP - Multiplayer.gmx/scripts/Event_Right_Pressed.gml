@@ -7,12 +7,12 @@ switch mode
         var get_instance = ds_list_find_value(entity_asteroid_list,0)
         if !is_undefined(get_instance)
             {
-            entity_destroy_asteroid(get_instance)
+            Event_Destroy_Asteroid(get_instance)
             Packet_Write(packet.entity_asteroid_destroy,get_instance)
             }
         if is_undefined(get_instance)
             {
-            //console("ERROR_Server")
+            console("ERROR_Server")
             }
         exit
         }

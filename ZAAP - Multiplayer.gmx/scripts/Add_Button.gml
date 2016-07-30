@@ -23,7 +23,7 @@ if argument_count > 1
         ds_map_add(get_button,"color",c_orange)
         ds_map_add(get_button,"text","Back")
         ds_map_add(get_button,"text_color",c_black)
-        ds_map_add(get_button,"kind","action")
+        ds_map_add(get_button,"kind","button_action")
         ds_map_add(get_button,"function","Back")
         }
     }
@@ -32,7 +32,7 @@ else
     ds_map_add(get_button,"color",c_orange)
     ds_map_add(get_button,"text","Shift-right click#to edit")
     ds_map_add(get_button,"text_color",c_black)
-    ds_map_add(get_button,"kind","action")
+    ds_map_add(get_button,"kind","button_action")
     ds_map_add(get_button,"function","Nothing")
     ds_map_add(get_button,"x1",room_width/2-100)
     ds_map_add(get_button,"x2",room_width/2+100)

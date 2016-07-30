@@ -24,6 +24,8 @@
       <script>scripts\Define_Data.gml</script>
       <script>scripts\Define_Packets.gml</script>
       <script>scripts\Define_Entities.gml</script>
+      <script>scripts\Define_Gravity_Behavior.gml</script>
+      <script>scripts\Define_Input_Actions.gml</script>
       <script>scripts\Define_Ship_Actions.gml</script>
       <script>scripts\Define_Sketch.gml</script>
     </scripts>
@@ -31,23 +33,30 @@
       <scripts name="Create">
         <script>scripts\Event_On_Engine_Create.gml</script>
         <script>scripts\Event_Engine_Create_Data_Structures.gml</script>
-        <script>scripts\Event_Game_End.gml</script>
+        <script>scripts\Event_Create_Entity.gml</script>
         <script>scripts\Event_Create_Entity_Asteroid.gml</script>
-        <script>scripts\Event_Create_Entity_Vortex.gml</script>
         <script>scripts\Event_Create_Entity_Ship.gml</script>
+        <script>scripts\Event_Create_Entity_Station.gml</script>
+        <script>scripts\Event_Create_Entity_Vortex.gml</script>
+      </scripts>
+      <scripts name="Destroy">
+        <script>scripts\Event_Destroy_Asteroid.gml</script>
       </scripts>
       <scripts name="Draw">
+        <scripts name="Panel">
+          <script>scripts\Create_Panels.gml</script>
+          <script>scripts\panel_playerlist_extended.gml</script>
+          <script>scripts\panel_playerlist_retracted.gml</script>
+          <script>scripts\panel_playerlist_kick_icon.gml</script>
+        </scripts>
         <script>scripts\Event_Draw_Engine.gml</script>
+        <script>scripts\Event_Draw_Engine_Gui.gml</script>
         <script>scripts\Event_Draw_Sketch.gml</script>
-        <script>scripts\Event_Draw_Ship_GUI.gml</script>
+        <script>scripts\Event_Draw_Ship_Gui.gml</script>
         <script>scripts\Event_Draw_Sketch_Warp.gml</script>
-        <script>scripts\draw_asteroid_line.gml</script>
         <script>scripts\Event_Draw_Entity.gml</script>
-        <script>scripts\Draw_Vortex.gml</script>
         <script>scripts\Event_Draw_Nearby_Ships.gml</script>
         <script>scripts\Event_Draw_Playerlist.gml</script>
-        <script>scripts\Draw_Ship.gml</script>
-        <script>scripts\panel_playerlist_extended.gml</script>
         <scripts name="Engine">
           <script>scripts\Event_Draw_Engine_Console.gml</script>
           <script>scripts\Event_Draw_Engine_Focused.gml</script>
@@ -66,6 +75,10 @@
           <script>scripts\Event_Draw_Entity_Ship.gml</script>
           <script>scripts\Event_Draw_Entity_Station.gml</script>
           <script>scripts\Event_Draw_Entity_Vortex.gml</script>
+          <script>scripts\Draw_Asteroid.gml</script>
+          <script>scripts\Draw_Vortex.gml</script>
+          <script>scripts\Draw_Ship.gml</script>
+          <script>scripts\draw_asteroid_line.gml</script>
         </scripts>
       </scripts>
       <scripts name="Step">
@@ -73,10 +86,13 @@
         <script>scripts\Event_Step_Engine_Drag_Button.gml</script>
         <script>scripts\Event_Step_Entity_Client.gml</script>
         <script>scripts\Event_Step_Entity_Server.gml</script>
-        <script>scripts\Event_Step_Entity_Ship.gml</script>
-        <script>scripts\Event_Step_Entity_Asteroid.gml</script>
-        <script>scripts\Event_Step_Entity_Vortex.gml</script>
         <script>scripts\Event_Step_Entity_Motion.gml</script>
+        <scripts name="Entity">
+          <script>scripts\Event_Step_Entity_Asteroid.gml</script>
+          <script>scripts\Event_Step_Entity_Ship.gml</script>
+          <script>scripts\Event_Step_Entity_Station.gml</script>
+          <script>scripts\Event_Step_Entity_Vortex.gml</script>
+        </scripts>
       </scripts>
       <scripts name="Mouse">
         <script>scripts\Event_Left_Pressed.gml</script>
@@ -87,31 +103,59 @@
         <script>scripts\Event_Left_Released_Menu.gml</script>
         <script>scripts\Event_Right_Pressed_Menu.gml</script>
         <script>scripts\Event_Right_Released_Menu.gml</script>
+        <script>scripts\Event_Mouse_Wheel_Up.gml</script>
+        <script>scripts\Event_Mouse_Wheel_Down.gml</script>
+        <script>scripts\Event_Mouse_Middle_Pressed.gml</script>
+        <script>scripts\Event_Mouse_Middle_Released.gml</script>
       </scripts>
       <scripts name="Keyboard">
         <script>scripts\Event_Key_Pressed.gml</script>
         <script>scripts\Event_Key_Released.gml</script>
         <scripts name="Pressed">
+          <script>scripts\Event_Key_Pressed_Client.gml</script>
+          <script>scripts\Event_Key_Pressed_Server.gml</script>
           <script>scripts\Event_Key_Pressed_Default.gml</script>
           <script>scripts\Event_Key_Pressed_Enter.gml</script>
-          <script>scripts\Event_Key_Pressed_Escape.gml</script>
-          <script>scripts\Event_Key_Pressed_Shift.gml</script>
-          <script>scripts\Event_Key_Pressed_Client_Shift.gml</script>
-          <script>scripts\Event_Key_Pressed_Client_S.gml</script>
-          <script>scripts\Event_Key_Pressed_A.gml</script>
-          <script>scripts\Event_Key_Pressed_D.gml</script>
-          <script>scripts\Event_Key_Pressed_N.gml</script>
-          <script>scripts\Event_Key_Pressed_O.gml</script>
-          <script>scripts\Event_Key_Pressed_Q.gml</script>
-          <script>scripts\Event_Key_Pressed_S.gml</script>
-          <script>scripts\Event_Key_Pressed_V.gml</script>
-          <script>scripts\Event_Key_Pressed_W.gml</script>
+          <scripts name="Client">
+            <script>scripts\Event_Key_Pressed_Client_A.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_D.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_Escape.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_N.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_O.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_Q.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_S.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_Shift.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_W.gml</script>
+          </scripts>
+          <scripts name="Server">
+            <script>scripts\Event_Key_Pressed_Server_A.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_D.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_Escape.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_N.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_O.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_Q.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_S.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_Shift.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_W.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F1.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F2.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F3.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F4.gml</script>
+          </scripts>
+          <scripts name="Default">
+            <script>scripts\Event_Key_Pressed_Default_Escape.gml</script>
+            <script>scripts\Event_Key_Pressed_Default_V.gml</script>
+          </scripts>
         </scripts>
         <scripts name="Released">
-          <script>scripts\Event_Key_Released_Client_A.gml</script>
-          <script>scripts\Event_Key_Released_Client_D.gml</script>
-          <script>scripts\Event_Key_Released_Client_S.gml</script>
-          <script>scripts\Event_Key_Released_Client_W.gml</script>
+          <scripts name="Client">
+            <script>scripts\Event_Key_Released_Client_A.gml</script>
+            <script>scripts\Event_Key_Released_Client_D.gml</script>
+            <script>scripts\Event_Key_Released_Client_W.gml</script>
+            <script>scripts\Event_Key_Released_Client_S.gml</script>
+          </scripts>
+          <script>scripts\Event_Key_Released_Client.gml</script>
+          <script>scripts\Event_Key_Released_Server.gml</script>
         </scripts>
       </scripts>
       <scripts name="Network">
@@ -119,14 +163,18 @@
         <script>scripts\Event_Network_Engine_Client.gml</script>
         <script>scripts\Event_Network_Engine_Server.gml</script>
         <script>scripts\Packet.gml</script>
-        <script>scripts\Packet_Mode.gml</script>
-        <script>scripts\Packet_Prepare.gml</script>
-        <script>scripts\Packet_Write.gml</script>
-        <script>scripts\Packet_Read.gml</script>
+        <scripts name="Async_Packet">
+          <script>scripts\Packet_Mode.gml</script>
+          <script>scripts\Packet_Prepare.gml</script>
+          <script>scripts\Packet_Write.gml</script>
+          <script>scripts\Packet_Read.gml</script>
+        </scripts>
         <scripts name="Client">
           <script>scripts\Client_Connect.gml</script>
           <script>scripts\client_send_packet.gml</script>
           <script>scripts\Client_Disconnect.gml</script>
+          <script>scripts\Client_Request_Ship_Control.gml</script>
+          <script>scripts\Get_SSN.gml</script>
         </scripts>
         <scripts name="Server">
           <script>scripts\Server_Create.gml</script>
@@ -157,64 +205,72 @@
           <script>scripts\packet_sss_remove.gml</script>
         </scripts>
         <script>scripts\packet_template_new.gml</script>
+        <script>scripts\sss_disconnect.gml</script>
+        <script>scripts\sss_connect.gml</script>
       </scripts>
-    </scripts>
-    <scripts name="Config">
-      <script>scripts\Delete_Config.gml</script>
-      <script>scripts\Config_Generate.gml</script>
-      <script>scripts\Config_Load.gml</script>
-      <script>scripts\Config_Save_Menu.gml</script>
-    </scripts>
-    <scripts name="Buttons">
-      <script>scripts\Button_Do.gml</script>
-      <script>scripts\Button_Do_Function.gml</script>
-      <script>scripts\Button_Do_Menu.gml</script>
-      <script>scripts\Find_Button.gml</script>
-      <script>scripts\Save_Buttons.gml</script>
-      <script>scripts\Load_Buttons.gml</script>
-      <script>scripts\Add_Button.gml</script>
-      <script>scripts\is_function.gml</script>
-      <script>scripts\button_search_value.gml</script>
-    </scripts>
-    <scripts name="Console">
-      <script>scripts\console.gml</script>
-      <script>scripts\Console_Command.gml</script>
-      <script>scripts\Console_Input.gml</script>
-    </scripts>
-    <scripts name="Menus">
-      <script>scripts\menu_destroy.gml</script>
-      <script>scripts\Menu_Jump_Main.gml</script>
-      <script>scripts\menu_create.gml</script>
-      <script>scripts\is_menu.gml</script>
-    </scripts>
-    <scripts name="Buffer">
-      <script>scripts\seek.gml</script>
-      <script>scripts\client_packet_write.gml</script>
-      <script>scripts\server_packet_write.gml</script>
+      <scripts name="Console">
+        <script>scripts\console.gml</script>
+        <script>scripts\Console_Command.gml</script>
+        <script>scripts\Console_Input.gml</script>
+      </scripts>
+      <scripts name="Buttons">
+        <scripts name="Config">
+          <script>scripts\Delete_Config.gml</script>
+          <script>scripts\Config_Generate.gml</script>
+          <script>scripts\Config_Load.gml</script>
+          <script>scripts\Config_Save_Menu.gml</script>
+        </scripts>
+        <script>scripts\Button_Do.gml</script>
+        <script>scripts\Button_Do_Function.gml</script>
+        <script>scripts\Button_Do_Menu.gml</script>
+        <script>scripts\Find_Button.gml</script>
+        <script>scripts\Save_Buttons.gml</script>
+        <script>scripts\Load_Buttons.gml</script>
+        <script>scripts\Add_Button.gml</script>
+        <script>scripts\is_function.gml</script>
+        <script>scripts\button_search_value.gml</script>
+      </scripts>
+      <scripts name="Menus">
+        <script>scripts\menu_destroy.gml</script>
+        <script>scripts\Menu_Jump_Main.gml</script>
+        <script>scripts\menu_create.gml</script>
+        <script>scripts\is_menu.gml</script>
+      </scripts>
+      <scripts name="Entity">
+        <scripts name="Gravity">
+          <script>scripts\Asteroid_Gravity.gml</script>
+          <script>scripts\Ship_Gravity.gml</script>
+          <script>scripts\Station_Gravity.gml</script>
+          <script>scripts\Vortex_Gravity.gml</script>
+          <script>scripts\Gravitate.gml</script>
+        </scripts>
+        <script>scripts\Asteroid_Orbit.gml</script>
+        <script>scripts\Entity_Ship_Update_Clients.gml</script>
+      </scripts>
+      <script>scripts\Event_Game_End.gml</script>
     </scripts>
     <scripts name="Helper Scripts">
+      <scripts name="Buffer">
+        <script>scripts\seek.gml</script>
+        <script>scripts\client_packet_write.gml</script>
+        <script>scripts\server_packet_write.gml</script>
+      </scripts>
+      <script>scripts\letter_was_pressed.gml</script>
+      <script>scripts\create_map.gml</script>
+      <script>scripts\destroy_map.gml</script>
       <script>scripts\play.gml</script>
       <script>scripts\show.gml</script>
       <script>scripts\is_ip.gml</script>
+      <script>scripts\create_sketch.gml</script>
+      <script>scripts\vector_add.gml</script>
     </scripts>
-    <scripts name="Entity">
-      <script>scripts\entity_create.gml</script>
-      <script>scripts\entity_destroy_asteroid.gml</script>
-      <script>scripts\Entity_Ship_Update_Clients.gml</script>
-    </scripts>
-    <script>scripts\sss_disconnect.gml</script>
-    <script>scripts\sss_connect.gml</script>
-    <script>scripts\panel_playerlist_retracted.gml</script>
-    <script>scripts\Create_Panels.gml</script>
-    <script>scripts\panel_playerlist_kick_icon.gml</script>
-    <script>scripts\Client_Request_Ship_Control.gml</script>
-    <script>scripts\Draw_Asteroid.gml</script>
-    <script>scripts\Get_SSN.gml</script>
-    <script>scripts\create_sketch.gml</script>
-    <script>scripts\vector_add.gml</script>
-    <script>scripts\create_map.gml</script>
-    <script>scripts\destroy_map.gml</script>
+    <script>scripts\script175.gml</script>
+    <script>scripts\Event_Key_Pressed_Client_F1.gml</script>
+    <script>scripts\Event_Draw_Action_Panel.gml</script>
   </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <objects name="objects">
     <object>objects\Engine</object>
   </objects>

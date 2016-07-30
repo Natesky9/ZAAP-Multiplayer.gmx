@@ -12,7 +12,7 @@ switch packet_mode
         var get_vector_direction = buffer_read(client_bin,buffer_f32)
         var get_vector_speed = buffer_read(client_bin,buffer_f32)
         var get_entity = buffer_read(client_bin,buffer_u8)
-        var new_entity = entity_create(entity.asteroid,get_x,get_y)
+        var new_entity = Event_Create_Entity(entity.asteroid,get_x,get_y)
         //
         ds_map_replace(new_entity,"vector_direction",get_vector_direction)
         ds_map_replace(new_entity,"vector_speed",get_vector_speed)
@@ -54,7 +54,7 @@ switch packet_mode
         var get_y = async_packet[data.arg_2]
         var get_vector_direction = async_packet[data.arg_3]
         var get_vector_speed = async_packet[data.arg_4]
-        var get_entity = entity_create(entity.asteroid,get_x,get_y)
+        var get_entity = Event_Create_Entity(entity.asteroid,get_x,get_y)
         
         //modifier for speed
         get_vector_speed = get_vector_speed / 10

@@ -4,7 +4,7 @@ var button_kind = ds_map_find_value(button,"kind")
 
 switch button_kind
     {
-    case "action":
+    case "button_action":
         {
         Event_Draw_Engine_Button_Action(button)
         exit;

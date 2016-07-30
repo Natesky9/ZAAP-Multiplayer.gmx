@@ -1,4 +1,7 @@
 var get_entity = argument0
+
+Ship_Gravity(get_entity)
+
 //Throttle
 var get_throttle = ds_map_find_value(get_entity,"throttle")
 var get_x = ds_map_find_value(get_entity,"x")

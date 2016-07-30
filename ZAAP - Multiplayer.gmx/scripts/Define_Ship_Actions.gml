@@ -1,4 +1,4 @@
-enum action
+enum ship_action
     {//these are actions that the ship performs
     jump_drive,
     primary_fire,

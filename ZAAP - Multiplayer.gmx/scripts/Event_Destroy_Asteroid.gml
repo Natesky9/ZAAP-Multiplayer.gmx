@@ -5,7 +5,7 @@ if pos != -1
     {
     show("Deleting asteroid")
     ds_list_delete(entity_asteroid_list,pos)
-    ds_map_destroy(get_entity)
+    destroy_map(get_entity)
     }
 else
     {

@@ -6,6 +6,7 @@ var get_y = argument[1]
 get_entity = create_map()
 ds_map_add(get_entity,"x",get_x)
 ds_map_add(get_entity,"y",get_y)
+ds_map_add(get_entity,"mass",1000000)
 ds_map_add(get_entity,"vector_direction",0)
 ds_map_add(get_entity,"vector_speed",0)
 //add map for vector

@@ -15,7 +15,7 @@ switch packet_mode
             var get_vector_direction = buffer_read(client_bin,buffer_f32)
             var get_vector_speed = buffer_read(client_bin,buffer_f32)
             //
-            var new_entity = entity_create(entity.vortex,get_x,get_y)
+            var new_entity = Event_Create_Entity(entity.vortex,get_x,get_y)
             //
             ds_map_replace(new_entity,"vector_direction",get_vector_direction)
             ds_map_replace(new_entity,"vector_speed",get_vector_speed)

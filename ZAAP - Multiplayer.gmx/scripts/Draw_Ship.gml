@@ -1,4 +1,10 @@
 var get_entity = argument0
+
+if is_undefined(get_entity)
+    {
+    console("Error, entity undefined! @Draw_Ship")
+    exit
+    }
     var get_x = ds_map_find_value(get_entity,"x")
     var get_y = ds_map_find_value(get_entity,"y")
     var get_direction = ds_map_find_value(get_entity,"direction")

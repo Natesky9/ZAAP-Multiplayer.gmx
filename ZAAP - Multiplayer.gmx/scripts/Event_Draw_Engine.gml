@@ -1,5 +1,4 @@
 
-Event_Draw_Engine_Console()
 
 var mode = ds_stack_top(menu_stack)
 
@@ -12,7 +11,7 @@ if window_has_focus()
             Event_Draw_Engine_Client();
             Event_Draw_Playerlist()
             Event_Draw_Entity()
-            Event_Draw_Ship_GUI()
+            Event_Draw_Ship_Gui()
             Event_Draw_Nearby_Ships()
             Event_Draw_Sketch()
             
@@ -49,8 +48,10 @@ else
             }
         case "Server_Window":
             {
-            Event_Draw_Engine_Server();
             Event_Draw_Playerlist()
+            Event_Draw_Entity()
+            Event_Draw_Sketch()
+            Event_Draw_Engine_Server();
             exit
             }
         }

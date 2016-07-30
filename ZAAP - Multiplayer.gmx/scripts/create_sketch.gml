@@ -28,7 +28,7 @@ switch type
         {
         console("Error, sketch not defined @create_sketch")
         //delete and remove
-        ds_map_destroy(new_sketch)
+        destroy_map(new_sketch)
         var pos = ds_list_find_index(sketch_list,new_sketch)
         ds_list_delete(sketch_list,pos)
         exit
