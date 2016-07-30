@@ -1,0 +1,13 @@
+var get_entity = argument0
+
+if vortex_gravity_affects_asteroid
+Gravitate(get_entity,entity_asteroid_list)
+
+if vortex_gravity_affects_ship
+Gravitate(get_entity,entity_ship_list)
+
+if vortex_gravity_affects_station
+Gravitate(get_entity,entity_station_list)
+
+if vortex_gravity_affects_vortex
+Gravitate(get_entity,entity_vortex_list)

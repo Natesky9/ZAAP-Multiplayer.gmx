@@ -5,7 +5,7 @@ var kind = ds_map_find_value(get_button,"kind")
 
 switch kind
     {
-    case "action":
+    case "button_action":
         {
         //find the menu it's pointing to
         done = Button_Do_Menu(get_button)

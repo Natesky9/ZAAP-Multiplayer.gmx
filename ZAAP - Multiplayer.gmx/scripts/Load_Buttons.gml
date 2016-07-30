@@ -19,7 +19,7 @@ while ini_section_exists("Button" + string(i)) //ini_read_real("available","Butt
     var button_text_color = ini_read_real("Button" + string(i),"text_color",c_black);
     ds_map_add(get_button,"text_color",button_text_color)
     
-    var button_kind = ini_read_string("Button" + string(i),"kind","action")
+    var button_kind = ini_read_string("Button" + string(i),"kind","button_action")
     ds_map_add(get_button,"kind",button_kind)
     
     var button_pressed = ini_read_real("Button" + string(i),"pressed",false);

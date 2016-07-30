@@ -5,7 +5,7 @@ if Ship_Control != -1
     draw_set_valign(fa_top)
     draw_set_color(c_blue)
     
-    draw_text(view_xview[0]+0,view_yview[0]+64,"Ship ID: " + string(Ship_Control))
+    draw_text(0,64,"Ship ID: " + string(Ship_Control))
     var get_x = ds_map_find_value(get_entity,"x")
     var get_y = ds_map_find_value(get_entity,"y")
 

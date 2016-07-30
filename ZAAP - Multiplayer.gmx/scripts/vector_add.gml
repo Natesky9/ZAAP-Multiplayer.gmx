@@ -2,6 +2,9 @@
 var get_entity = argument[0]
 var get_add_vector_magnitude = argument[1]
 var get_add_vector_direction = argument[2]
+//update magnitude to reflect mass
+var get_entity_mass = ds_map_find_value(get_entity,"mass")
+get_add_vector_magnitude = get_add_vector_magnitude / get_entity_mass
 //starting vector
 var get_current_vector_direction = ds_map_find_value(get_entity,"vector_direction")
 var get_current_vector_speed = ds_map_find_value(get_entity,"vector_speed")

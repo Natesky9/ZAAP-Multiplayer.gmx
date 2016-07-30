@@ -8,6 +8,11 @@ nearest_ship = -1
 for (i = 0;i < size;i += 1)
     {
     var get_entity = ds_list_find_value(entity_ship_list,i)
+    if is_undefined(get_entity)
+        {
+        console("Error, ship undefined @Event_Draw_Entity_Ship")
+        }
+        
     if !is_undefined(get_entity)
         {
         Draw_Ship(get_entity)

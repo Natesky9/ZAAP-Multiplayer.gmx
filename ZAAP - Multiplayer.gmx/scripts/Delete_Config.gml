@@ -23,7 +23,7 @@ for (var i = 0;i < num;i += 1)
         {
         var get_map = ds_list_find_value(get_menu,0)
         console("deleting " + string(get_map))
-        ds_map_destroy(get_map)
+        destroy_map(get_map)
         ds_list_delete(get_menu,0)
         }
     }

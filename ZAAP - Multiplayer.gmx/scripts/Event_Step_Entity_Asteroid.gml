@@ -1,5 +1,20 @@
-var get_entity = argument0
-var get_x = ds_map_find_value(get_entity,"x")
-var get_y = ds_map_find_value(get_entity,"y")
+var get_step_entity = argument0
 
-Event_Step_Entity_Motion(get_entity)
+Asteroid_Gravity(get_step_entity)
+
+
+
+Event_Step_Entity_Motion(get_step_entity)
+
+is_orbiting = false
+
+Asteroid_Orbit(get_step_entity)
+
+
+if !is_orbiting
+    {
+    ds_map_replace(get_step_entity,"primary",0)
+    ds_map_replace(get_step_entity,"argument",0)
+    ds_map_replace(get_step_entity,"apoapsis",0)
+    ds_map_replace(get_step_entity,"periapsis",0)
+    }

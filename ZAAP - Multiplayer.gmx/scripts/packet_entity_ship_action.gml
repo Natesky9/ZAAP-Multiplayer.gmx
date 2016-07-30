@@ -19,7 +19,7 @@ switch packet_mode
         switch get_action
             {
             //----------------//
-            case action.jump_drive:
+            case ship_action.jump_drive:
                 {
                 var new_x = buffer_read(client_bin,buffer_f32)
                 var new_y = buffer_read(client_bin,buffer_f32)
@@ -34,44 +34,44 @@ switch packet_mode
                 //add warp effects here
                 }
             //----------------//
-            case action.toggle_brake_off:
+            case ship_action.toggle_brake_off:
                 {
                 ds_map_replace(get_entity,"brake",0)
                 break
                 }
             //----------------//
-            case action.toggle_brake_on:
+            case ship_action.toggle_brake_on:
                 {
                 //console("brake2")
                 ds_map_replace(get_entity,"brake",1)
                 break
                 }
             //----------------//
-            case action.toggle_throttle_off:
+            case ship_action.toggle_throttle_off:
                 {
                 ds_map_replace(get_entity,"throttle",0)
                 break
                 }
             //----------------//
-            case action.toggle_throttle_on:
+            case ship_action.toggle_throttle_on:
                 {
                 ds_map_replace(get_entity,"throttle",1)
                 break
                 }
             //----------------//
-            case action.toggle_steer_left:
+            case ship_action.toggle_steer_left:
                 {
                 ds_map_replace(get_entity,"steer",-1)
                 break
                 }
             //----------------//
-            case action.toggle_steer_straight:
+            case ship_action.toggle_steer_straight:
                 {
                 ds_map_replace(get_entity,"steer",0)
                 break
                 }
             //----------------//
-            case action.toggle_steer_right:
+            case ship_action.toggle_steer_right:
                 {
                 ds_map_replace(get_entity,"steer",1)
                 break
@@ -120,7 +120,7 @@ switch packet_mode
         switch get_action
             {
             //----------------//
-            case action.jump_drive:
+            case ship_action.jump_drive:
                 {
                 var get_x = ds_map_find_value(get_entity,"x")
                 var get_y = ds_map_find_value(get_entity,"y")
@@ -139,43 +139,43 @@ switch packet_mode
                 break
                 }
             //----------------//
-            case action.toggle_brake_off:
+            case ship_action.toggle_brake_off:
                 {
                 ds_map_replace(get_entity,"brake",0)
                 break
                 }
             //----------------//
-            case action.toggle_brake_on:
+            case ship_action.toggle_brake_on:
                 {
                 ds_map_replace(get_entity,"brake",1)
                 break
                 }
             //----------------//
-            case action.toggle_throttle_off:
+            case ship_action.toggle_throttle_off:
                 {
                 ds_map_replace(get_entity,"throttle",0)
                 break
                 }
             //----------------//
-            case action.toggle_throttle_on:
+            case ship_action.toggle_throttle_on:
                 {
                 ds_map_replace(get_entity,"throttle",1)
                 break
                 }
             //----------------//
-            case action.toggle_steer_left:
+            case ship_action.toggle_steer_left:
                 {
                 ds_map_replace(get_entity,"steer",-1)
                 break
                 }
             //----------------//
-            case action.toggle_steer_straight:
+            case ship_action.toggle_steer_straight:
                 {
                 ds_map_replace(get_entity,"steer",0)
                 break
                 }
             //----------------//
-            case action.toggle_steer_right:
+            case ship_action.toggle_steer_right:
                 {
                 ds_map_replace(get_entity,"steer",1)
                 break

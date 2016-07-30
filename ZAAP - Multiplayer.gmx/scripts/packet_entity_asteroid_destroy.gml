@@ -8,7 +8,7 @@ switch packet_mode
         {
         var get_entity = buffer_read(client_bin,buffer_u32)
         var csn = ds_map_find_value(ssn_map,get_entity)
-        entity_destroy_asteroid(csn)
+        Event_Destroy_Asteroid(csn)
         
         exit
         }
@@ -24,7 +24,7 @@ switch packet_mode
     case data.server_read:
         {
         var get_entity = buffer_read(server_bin,buffer_u8)
-        entity_destroy_asteroid(get_entity)
+        Event_Destroy_Asteroid(get_entity)
         Packet_Write(packet.entity_asteroid_destroy,get_entity)
         exit
         }

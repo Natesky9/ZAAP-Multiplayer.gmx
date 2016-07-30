@@ -1,79 +1,42 @@
-if keyboard_check_pressed(vk_shift)
+
+if keyboard_check_pressed(vk_enter)
     {
-    Event_Key_Pressed_Shift()
-    //console("Test")
+    Event_Key_Pressed_Enter()
     }
 
 
 mode = ds_stack_top(menu_stack)
 
-switch keyboard_key
+switch mode
     {
     //--------------------------------//
-    case ord('Q'):
+    case "Client_Window":
         {
-        Event_Key_Pressed_Q()
-        exit
+        Event_Key_Pressed_Client()
+        break
         }
     //--------------------------------//
-    case ord('V'):
+    case "Server_Window":
         {
-        Event_Key_Pressed_V()
-        }
-    //--------------------------------//
-    case ord('W'):
-        {
-        Event_Key_Pressed_W()
-        exit
-        }
-    //--------------------------------//
-    case ord('A'):
-        {
-        Event_Key_Pressed_A()
-        exit
-        }
-    //--------------------------------//
-    case ord('S'):
-        {
-        Event_Key_Pressed_S()
-        exit
-        }
-    //--------------------------------//
-    case ord('D'):
-        {
-        Event_Key_Pressed_D()
-        exit
-        }
-    //--------------------------------//
-    case ord('N'):
-        {
-        Event_Key_Pressed_N()
-        exit
-        }
-    //--------------------------------//
-    case ord('O'):
-        {
-        Event_Key_Pressed_O()
-        exit
-        }
-    //--------------------------------//
-    case vk_escape:
-        {
-        Event_Key_Pressed_Escape()
-        exit
-        }
-
-    //--------------------------------//
-    case vk_enter:
-        {
-        Event_Key_Pressed_Enter()
-        exit
+        Event_Key_Pressed_Server()
+        break
         }
     //--------------------------------//
     default:
-        {   
+        {
         Event_Key_Pressed_Default()
-        exit
+        
+        if letter_was_pressed('V')
+            {
+            Event_Key_Pressed_Default_V()
+            exit
+            }
+        if keyboard_check_pressed(vk_escape)
+            {
+            Event_Key_Pressed_Default_Escape()
+            exit
+            }
+        break
         }
     //--------------------------------//
     }

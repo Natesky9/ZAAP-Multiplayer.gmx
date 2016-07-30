@@ -12,7 +12,7 @@ switch packet_mode
             var get_entity = buffer_read(client_bin,buffer_u8)
             var get_x = buffer_read(client_bin,buffer_f32)
             var get_y = buffer_read(client_bin,buffer_f32)
-            var new_entity = entity_create(entity.ship,get_x,get_y)
+            var new_entity = Event_Create_Entity(entity.ship,get_x,get_y)
             //
             ds_map_add(new_entity,"ssn",get_entity)
             ds_map_add(ssn_map,get_entity,new_entity)

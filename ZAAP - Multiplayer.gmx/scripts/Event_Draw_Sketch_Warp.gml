@@ -18,7 +18,7 @@ ds_map_replace(get_sketch,"timer",timer-1)
 
 if timer <= 0
     {
-    ds_map_destroy(get_sketch)
+    destroy_map(get_sketch)
     var pos = ds_list_find_index(sketch_list,get_sketch)
     ds_list_delete(sketch_list,pos)
     }
