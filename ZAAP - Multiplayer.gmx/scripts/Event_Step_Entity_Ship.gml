@@ -2,6 +2,8 @@ var get_entity = argument0
 
 Ship_Gravity(get_entity)
 
+Event_Step_Entity_Motion(get_entity)
+
 //Throttle
 var get_throttle = ds_map_find_value(get_entity,"throttle")
 var get_x = ds_map_find_value(get_entity,"x")
@@ -13,11 +15,10 @@ var get_vector_speed = ds_map_find_value(get_entity,"vector_speed")
 
 if get_throttle
     {
-    vector_add(get_entity,.1,get_direction)
+    vector_add(get_entity,100,get_direction)
     }
 //end throttle
 
-Event_Step_Entity_Motion(get_entity)
 
 //brake
 if get_brake

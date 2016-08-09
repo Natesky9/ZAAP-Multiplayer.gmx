@@ -16,5 +16,5 @@ var text = "You are Player[" + string(SSS) + "]"
 if SSS == -1
 var text = "You are Host"
 
-draw_text(256,32,text)
+draw_text(256,64+16,text)
 

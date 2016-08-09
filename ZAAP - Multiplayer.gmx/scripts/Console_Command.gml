@@ -82,10 +82,10 @@ switch command
             case "kind":
                 {
                 console("Listing all kinds of buttons")
-                for (i = 0;i < ds_list_size(kind_list);i += 1)
+                for (i = 0;i < ds_list_size(type_list);i += 1)
                     {
-                    var get_kind = ds_list_find_value(kind_list,i)
-                    console(get_kind)
+                    var get_type = ds_list_find_value(type_list,i)
+                    console(get_type)
                     }
                 console("Done listing all kinds of buttons")
                 exit

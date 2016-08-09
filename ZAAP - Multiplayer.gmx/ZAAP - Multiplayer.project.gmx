@@ -31,16 +31,34 @@
     </scripts>
     <scripts name="Events">
       <scripts name="Create">
+        <scripts name="Create Entity">
+          <script>scripts\Event_Create_Entity.gml</script>
+          <script>scripts\Event_Create_Entity_Asteroid.gml</script>
+          <script>scripts\Event_Create_Entity_Star.gml</script>
+          <script>scripts\Event_Create_Entity_Ship.gml</script>
+          <script>scripts\Event_Create_Entity_Vortex.gml</script>
+          <script>scripts\Event_Create_Entity_Object.gml</script>
+          <script>scripts\Event_Create_Entity_Projectile.gml</script>
+          <script>scripts\Event_Create_Entity_Station.gml</script>
+        </scripts>
         <script>scripts\Event_On_Engine_Create.gml</script>
         <script>scripts\Event_Engine_Create_Data_Structures.gml</script>
-        <script>scripts\Event_Create_Entity.gml</script>
-        <script>scripts\Event_Create_Entity_Asteroid.gml</script>
-        <script>scripts\Event_Create_Entity_Ship.gml</script>
-        <script>scripts\Event_Create_Entity_Station.gml</script>
-        <script>scripts\Event_Create_Entity_Vortex.gml</script>
+        <script>scripts\Event_Engine_Create_Button_Functions.gml</script>
+        <script>scripts\Event_Engine_Create_Button_Types.gml</script>
+        <script>scripts\Event_Engine_Create_Colors.gml</script>
+        <script>scripts\Event_Engine_Create_Commands.gml</script>
+        <script>scripts\Event_Engine_Create_Entity_Lists.gml</script>
+        <script>scripts\Event_Engine_Create_Menu.gml</script>
+        <script>scripts\Event_Engine_Create_Network.gml</script>
       </scripts>
       <scripts name="Destroy">
+        <script>scripts\Event_Destroy_Projectile.gml</script>
+        <script>scripts\Event_Destroy_Object.gml</script>
         <script>scripts\Event_Destroy_Asteroid.gml</script>
+        <script>scripts\Event_Destroy_Ship.gml</script>
+        <script>scripts\Event_Destroy_Station.gml</script>
+        <script>scripts\Event_Destroy_Star.gml</script>
+        <script>scripts\Event_Destroy_Vortex.gml</script>
       </scripts>
       <scripts name="Draw">
         <scripts name="Panel">
@@ -51,6 +69,7 @@
         </scripts>
         <script>scripts\Event_Draw_Engine.gml</script>
         <script>scripts\Event_Draw_Engine_Gui.gml</script>
+        <script>scripts\Event_Draw_Action_Panel.gml</script>
         <script>scripts\Event_Draw_Sketch.gml</script>
         <script>scripts\Event_Draw_Ship_Gui.gml</script>
         <script>scripts\Event_Draw_Sketch_Warp.gml</script>
@@ -71,26 +90,40 @@
           </scripts>
         </scripts>
         <scripts name="Entity">
+          <scripts name="Draw">
+            <script>scripts\Draw_Asteroid.gml</script>
+            <script>scripts\Draw_Ship.gml</script>
+            <script>scripts\Draw_Projectile.gml</script>
+            <script>scripts\Draw_Vortex.gml</script>
+            <script>scripts\Draw_Star.gml</script>
+            <script>scripts\Draw_Station.gml</script>
+            <script>scripts\Draw_Object.gml</script>
+          </scripts>
+          <script>scripts\Draw_Orbit.gml</script>
+          <script>scripts\draw_asteroid_line.gml</script>
+          <script>scripts\Event_Draw_Entity_Projectile.gml</script>
+          <script>scripts\Event_Draw_Entity_Object.gml</script>
           <script>scripts\Event_Draw_Entity_Asteroid.gml</script>
           <script>scripts\Event_Draw_Entity_Ship.gml</script>
           <script>scripts\Event_Draw_Entity_Station.gml</script>
+          <script>scripts\Event_Draw_Entity_Star.gml</script>
           <script>scripts\Event_Draw_Entity_Vortex.gml</script>
-          <script>scripts\Draw_Asteroid.gml</script>
-          <script>scripts\Draw_Vortex.gml</script>
-          <script>scripts\Draw_Ship.gml</script>
-          <script>scripts\draw_asteroid_line.gml</script>
         </scripts>
+        <script>scripts\draw_input_action_panel.gml</script>
       </scripts>
       <scripts name="Step">
         <script>scripts\Event_Step_Engine.gml</script>
         <script>scripts\Event_Step_Engine_Drag_Button.gml</script>
         <script>scripts\Event_Step_Entity_Client.gml</script>
-        <script>scripts\Event_Step_Entity_Server.gml</script>
+        <script>scripts\Event_Step_Entity.gml</script>
         <script>scripts\Event_Step_Entity_Motion.gml</script>
         <scripts name="Entity">
+          <script>scripts\Event_Step_Entity_Projectile.gml</script>
+          <script>scripts\Event_Step_Entity_Object.gml</script>
           <script>scripts\Event_Step_Entity_Asteroid.gml</script>
           <script>scripts\Event_Step_Entity_Ship.gml</script>
           <script>scripts\Event_Step_Entity_Station.gml</script>
+          <script>scripts\Event_Step_Entity_Star.gml</script>
           <script>scripts\Event_Step_Entity_Vortex.gml</script>
         </scripts>
       </scripts>
@@ -119,6 +152,7 @@
           <scripts name="Client">
             <script>scripts\Event_Key_Pressed_Client_A.gml</script>
             <script>scripts\Event_Key_Pressed_Client_D.gml</script>
+            <script>scripts\Event_Key_Pressed_Client_F1.gml</script>
             <script>scripts\Event_Key_Pressed_Client_Escape.gml</script>
             <script>scripts\Event_Key_Pressed_Client_N.gml</script>
             <script>scripts\Event_Key_Pressed_Client_O.gml</script>
@@ -141,6 +175,9 @@
             <script>scripts\Event_Key_Pressed_Server_F2.gml</script>
             <script>scripts\Event_Key_Pressed_Server_F3.gml</script>
             <script>scripts\Event_Key_Pressed_Server_F4.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F5.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F6.gml</script>
+            <script>scripts\Event_Key_Pressed_Server_F7.gml</script>
           </scripts>
           <scripts name="Default">
             <script>scripts\Event_Key_Pressed_Default_Escape.gml</script>
@@ -183,24 +220,42 @@
         </scripts>
         <scripts name="Packets">
           <script>scripts\packet_chat_send.gml</script>
-          <script>scripts\packet_entity_asteroid_create.gml</script>
-          <script>scripts\packet_entity_asteroid_destroy.gml</script>
-          <script>scripts\packet_entity_asteroid_load.gml</script>
+          <script>scripts\packet_entity_create_asteroid.gml</script>
+          <script>scripts\packet_entity_create_object.gml</script>
+          <script>scripts\packet_entity_create_projectile.gml</script>
+          <script>scripts\packet_entity_create_ship.gml</script>
+          <script>scripts\packet_entity_create_star.gml</script>
+          <script>scripts\packet_entity_create_station.gml</script>
+          <script>scripts\packet_entity_create_vortex.gml</script>
+          <script>scripts\packet_entity_destroy_asteroid.gml</script>
+          <script>scripts\packet_entity_destroy_object.gml</script>
+          <script>scripts\packet_entity_destroy_projectile.gml</script>
+          <script>scripts\packet_entity_destroy_ship.gml</script>
+          <script>scripts\packet_entity_destroy_star.gml</script>
+          <script>scripts\packet_entity_destroy_station.gml</script>
+          <script>scripts\packet_entity_destroy_vortex.gml</script>
+          <script>scripts\packet_entity_load_asteroid.gml</script>
+          <script>scripts\packet_entity_load_object.gml</script>
+          <script>scripts\packet_entity_load_projectile.gml</script>
+          <script>scripts\packet_entity_load_ship.gml</script>
+          <script>scripts\packet_entity_load_star.gml</script>
+          <script>scripts\packet_entity_load_station.gml</script>
+          <script>scripts\packet_entity_load_vortex.gml</script>
           <script>scripts\packet_entity_ship_action.gml</script>
-          <script>scripts\packet_entity_ship_create.gml</script>
-          <script>scripts\packet_entity_ship_destroy.gml</script>
-          <script>scripts\packet_entity_ship_load.gml</script>
           <script>scripts\packet_entity_ship_set_control.gml</script>
-          <script>scripts\packet_entity_ship_update.gml</script>
-          <script>scripts\packet_entity_vortex_create.gml</script>
-          <script>scripts\packet_entity_vortex_destroy.gml</script>
-          <script>scripts\packet_entity_vortex_load.gml</script>
+          <script>scripts\packet_entity_update_asteroid.gml</script>
+          <script>scripts\packet_entity_update_object.gml</script>
+          <script>scripts\packet_entity_update_projectile.gml</script>
+          <script>scripts\packet_entity_update_ship.gml</script>
+          <script>scripts\packet_entity_update_star.gml</script>
+          <script>scripts\packet_entity_update_station.gml</script>
+          <script>scripts\packet_entity_update_vortex.gml</script>
           <script>scripts\packet_kick.gml</script>
           <script>scripts\packet_ping_request.gml</script>
           <script>scripts\packet_ping_tell.gml</script>
           <script>scripts\packet_player_request_entity_control.gml</script>
-          <script>scripts\packet_sss_assign.gml</script>
           <script>scripts\packet_sss_add.gml</script>
+          <script>scripts\packet_sss_assign.gml</script>
           <script>scripts\packet_sss_load.gml</script>
           <script>scripts\packet_sss_remove.gml</script>
         </scripts>
@@ -238,14 +293,17 @@
       </scripts>
       <scripts name="Entity">
         <scripts name="Gravity">
+          <script>scripts\Projectile_Gravity.gml</script>
+          <script>scripts\Object_Gravity.gml</script>
           <script>scripts\Asteroid_Gravity.gml</script>
           <script>scripts\Ship_Gravity.gml</script>
           <script>scripts\Station_Gravity.gml</script>
+          <script>scripts\Star_Gravity.gml</script>
           <script>scripts\Vortex_Gravity.gml</script>
-          <script>scripts\Gravitate.gml</script>
         </scripts>
         <script>scripts\Asteroid_Orbit.gml</script>
         <script>scripts\Entity_Ship_Update_Clients.gml</script>
+        <script>scripts\Gravitate.gml</script>
       </scripts>
       <script>scripts\Event_Game_End.gml</script>
     </scripts>
@@ -256,6 +314,17 @@
         <script>scripts\server_packet_write.gml</script>
       </scripts>
       <script>scripts\letter_was_pressed.gml</script>
+      <script>scripts\client_read_u8.gml</script>
+      <script>scripts\server_read_f32.gml</script>
+      <script>scripts\client_read_position.gml</script>
+      <script>scripts\client_write_position.gml</script>
+      <script>scripts\server_read_position.gml</script>
+      <script>scripts\server_write_position.gml</script>
+      <script>scripts\async_position.gml</script>
+      <script>scripts\server_write_f32.gml</script>
+      <script>scripts\server_write_u8.gml</script>
+      <script>scripts\client_write_f32.gml</script>
+      <script>scripts\client_read_f32.gml</script>
       <script>scripts\create_map.gml</script>
       <script>scripts\destroy_map.gml</script>
       <script>scripts\play.gml</script>
@@ -264,13 +333,21 @@
       <script>scripts\create_sketch.gml</script>
       <script>scripts\vector_add.gml</script>
     </scripts>
-    <script>scripts\script175.gml</script>
-    <script>scripts\Event_Key_Pressed_Client_F1.gml</script>
-    <script>scripts\Event_Draw_Action_Panel.gml</script>
+    <script>scripts\show_entity_true.gml</script>
+    <scripts name="Actions">
+      <script>scripts\Initialize_Action.gml</script>
+      <script>scripts\Action_Delete.gml</script>
+      <script>scripts\Action_Create.gml</script>
+    </scripts>
+    <script>scripts\set_view_size.gml</script>
+    <script>scripts\script246.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\Courier</font>
+  </fonts>
   <objects name="objects">
     <object>objects\Engine</object>
   </objects>

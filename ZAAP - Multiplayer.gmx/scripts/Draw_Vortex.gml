@@ -7,5 +7,12 @@ var get_mass = ds_map_find_value(get_entity,"mass")
 draw_sprite(spr_vortex,0,get_x,get_y)
 draw_set_color(c_red)
 draw_set_circle_precision(64)
-var radius = get_mass
-draw_circle(get_x,get_y,radius,true)
+var gravity_radius = get_mass
+var vortex_radius = get_mass/100
+
+draw_set_color(c_green)
+draw_circle(get_x,get_y,gravity_radius,true)
+
+draw_set_alpha(.1)
+draw_circle_color(get_x,get_y,vortex_radius,c_black,c_red,false)
+draw_set_alpha(1)

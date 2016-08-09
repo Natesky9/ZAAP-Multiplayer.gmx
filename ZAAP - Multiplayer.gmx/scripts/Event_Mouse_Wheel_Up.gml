@@ -14,6 +14,8 @@ if keyboard_check(vk_shift)
         view_wview[0] -= get_width*2
         view_hview[0] -= get_height*2
         
+        set_view_size()
+        
         exit
         }
     }
@@ -23,4 +25,4 @@ view_yview[0] += value
 view_wview[0] -= value*2
 view_hview[0] -= value*2
 
-show("mouse wheel up")
+set_view_size()

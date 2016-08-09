@@ -46,7 +46,7 @@ switch packet_mode
         //replace this with server_write at the same time to fill with 1 arg
         var get_entity = buffer_read(server_bin,buffer_u32)
         
-        Packet_Write(packet.entity_ship_update,get_entity)
+        Packet_Write(packet.entity_update_ship,get_entity)
         exit
         }
 //--------------------------------//

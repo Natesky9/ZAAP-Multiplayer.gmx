@@ -37,3 +37,13 @@ if keyboard_check_pressed(vk_f3)
 //
 if keyboard_check_pressed(vk_f4)
     {Event_Key_Pressed_Server_F4();exit}
+//
+if keyboard_check_pressed(vk_f5)
+    {Event_Key_Pressed_Server_F5();exit}
+//
+if keyboard_check_pressed(vk_f6)
+    {Event_Key_Pressed_Server_F6();exit}
+//
+if keyboard_check_pressed(vk_f7)
+    {Event_Key_Pressed_Server_F7();exit}
+//

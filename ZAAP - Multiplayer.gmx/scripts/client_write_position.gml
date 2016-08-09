@@ -1,0 +1,4 @@
+client_write_f32(get_x)
+client_write_f32(get_y)
+client_write_f32(get_vector_direction)
+client_write_f32(get_vector_speed)
