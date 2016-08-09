@@ -9,41 +9,104 @@ switch packet_type
     case packet.chat_send:
         {packet_chat_send(async_packet);exit}
 //--------------------------------//
-    case packet.entity_asteroid_create:
-        {packet_entity_asteroid_create(async_packet);exit}
+//entity create packets
 //--------------------------------//
-    case packet.entity_asteroid_destroy:
-        {packet_entity_asteroid_destroy(async_packet);exit}
+    case packet.entity_create_projectile:
+        {packet_entity_create_projectile(async_packet);exit}
 //--------------------------------//
-    case packet.entity_asteroid_load:
-        {packet_entity_asteroid_load(async_packet);exit}
+    case packet.entity_create_object:
+        {packet_entity_create_object(async_packet);exit}
+//--------------------------------//
+    case packet.entity_create_asteroid:
+        {packet_entity_create_asteroid(async_packet);exit}
+//--------------------------------//
+    case packet.entity_create_ship:
+        {packet_entity_create_ship(async_packet);exit}
+//--------------------------------//
+    case packet.entity_create_station:
+        {packet_entity_create_station(async_packet);exit}
+//--------------------------------//
+    case packet.entity_create_star:
+        {packet_entity_create_star(async_packet);exit}
+//--------------------------------//
+    case packet.entity_create_vortex:
+        {packet_entity_create_vortex(async_packet);exit}
+//--------------------------------//
+//entity destroy packets
+//--------------------------------//
+    case packet.entity_destroy_projectile:
+        {packet_entity_destroy_projectile(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_object:
+        {packet_entity_destroy_object(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_asteroid:
+        {packet_entity_destroy_asteroid(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_ship:
+        {packet_entity_destroy_ship(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_station:
+        {packet_entity_destroy_station(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_star:
+        {packet_entity_destroy_star(async_packet);exit}
+//--------------------------------//
+    case packet.entity_destroy_vortex:
+        {packet_entity_destroy_vortex(async_packet);exit}
+//--------------------------------//
+//entity load packets
+//--------------------------------//
+    case packet.entity_load_projectile:
+        {packet_entity_load_projectile(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_object:
+        {packet_entity_load_object(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_asteroid:
+        {packet_entity_load_asteroid(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_ship:
+        {packet_entity_load_ship(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_station:
+        {packet_entity_load_station(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_star:
+        {packet_entity_load_star(async_packet);exit}
+//--------------------------------//
+    case packet.entity_load_vortex:
+        {packet_entity_load_vortex(async_packet);exit}
+//--------------------------------//
+//misc packets
+//--------------------------------//
+    case packet.entity_update_projectile:
+        {packet_entity_update_projectile(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_object:
+        {packet_entity_update_object(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_asteroid:
+        {packet_entity_update_asteroid(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_ship:
+        {packet_entity_update_ship(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_station:
+        {packet_entity_update_station(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_star:
+        {packet_entity_update_star(async_packet);exit}
+//--------------------------------//
+    case packet.entity_update_vortex:
+        {packet_entity_update_vortex(async_packet);exit}
+//--------------------------------//
 //--------------------------------//
     case packet.entity_ship_action:
         {packet_entity_ship_action(async_packet);exit}
 //--------------------------------//
-    case packet.entity_ship_create:
-        {packet_entity_ship_create(async_packet);exit}
-//--------------------------------//
-    case packet.entity_ship_destroy:
-        {packet_entity_ship_destroy(async_packet);exit}
-//--------------------------------//
-    case packet.entity_ship_load:
-        {packet_entity_ship_load(async_packet);exit}
-//--------------------------------//
     case packet.entity_ship_set_control:
         {packet_entity_ship_set_control(async_packet);exit}
-//--------------------------------//
-    case packet.entity_ship_update:
-        {packet_entity_ship_update(async_packet);exit}
-//--------------------------------//
-    case packet.entity_vortex_create:
-        {packet_entity_vortex_create(async_packet);exit}
-//--------------------------------//
-    case packet.entity_vortex_destroy:
-        {packet_entity_vortex_destroy(async_packet);exit}
-//--------------------------------//
-    case packet.entity_vortex_load:
-        {packet_entity_vortex_load(async_packet);exit}
 //--------------------------------//
     case packet.kick:
         {packet_kick(async_packet);exit}

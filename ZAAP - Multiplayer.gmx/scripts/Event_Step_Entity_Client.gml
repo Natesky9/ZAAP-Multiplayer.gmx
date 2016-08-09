@@ -4,28 +4,6 @@ if !((lifetime) mod 30) and (SSS != -1)
     Packet_Write(packet.ping_request)
     }
 //end request ping
-    
-//ship step
-for (var i = 0;i < ds_list_size(entity_ship_list);i += 1)
-    {
-    var get_entity = ds_list_find_value(entity_ship_list,i)
-    if !is_undefined(get_entity)
-    Event_Step_Entity_Ship(get_entity)
-    }
-//end ship step
-for (var i = 0;i < ds_list_size(entity_vortex_list);i += 1)
-    {
-    var get_entity = ds_list_find_value(entity_vortex_list,i)
-    if !is_undefined(get_entity)
-    Event_Step_Entity_Vortex(get_entity)
-    }
-    
-for (var i = 0;i < ds_list_size(entity_asteroid_list);i += 1)
-    {//asteroid step
-    var get_entity = ds_list_find_value(entity_asteroid_list,i)
-    if !is_undefined(get_entity)
-    Event_Step_Entity_Asteroid(get_entity)
-    }
 
 if Ship_Control == -1
     {

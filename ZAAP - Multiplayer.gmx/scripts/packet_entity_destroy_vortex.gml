@@ -25,7 +25,7 @@ switch packet_mode
         {
         var get_entity = buffer_read(server_bin,buffer_u8)
         Event_Destroy_Asteroid(get_entity)
-        Packet_Write(packet.entity_asteroid_destroy,get_entity)
+        Packet_Write(packet.entity_destroy_vortex,get_entity)
         exit
         }
 //--------------------------------//
@@ -39,6 +39,6 @@ switch packet_mode
 //--------------------------------//
     default:
         {
-        show("Error, no case! @packet_asteroid_create@")
+        show("Error, no case! @packet_vortex_destroy@")
         }
     }

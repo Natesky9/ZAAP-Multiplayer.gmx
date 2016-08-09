@@ -1,0 +1,22 @@
+var get_entity = argument0
+
+if star_gravity_affects_projectile
+Gravitate(get_entity,entity_projectile_list)
+
+if star_gravity_affects_object
+Gravitate(get_entity,entity_projectile_list)
+
+if star_gravity_affects_asteroid
+Gravitate(get_entity,entity_asteroid_list)
+
+if star_gravity_affects_ship
+Gravitate(get_entity,entity_ship_list)
+
+if star_gravity_affects_station
+Gravitate(get_entity,entity_station_list)
+
+if star_gravity_affects_star
+Gravitate(get_entity,entity_star_list)
+
+if star_gravity_affects_vortex
+Gravitate(get_entity,entity_vortex_list)

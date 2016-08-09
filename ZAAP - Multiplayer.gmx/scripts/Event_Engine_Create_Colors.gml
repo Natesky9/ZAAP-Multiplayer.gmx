@@ -1,0 +1,10 @@
+color_list = ds_list_create()
+
+ds_list_add(color_list,c_red)
+ds_list_add(color_list,c_orange)
+ds_list_add(color_list,c_yellow)
+ds_list_add(color_list,c_green)
+ds_list_add(color_list,c_blue)
+ds_list_add(color_list,c_purple)
+ds_list_add(color_list,c_white)
+ds_list_add(color_list,c_black)

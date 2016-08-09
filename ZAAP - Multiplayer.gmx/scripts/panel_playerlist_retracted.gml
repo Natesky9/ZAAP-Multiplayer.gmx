@@ -1,9 +1,10 @@
 var players = ds_list_size(playerlist)
 
-panel_playerlist_x1 = view_xview[0]
-panel_playerlist_y1 = view_yview[0]
-panel_playerlist_x2 = view_xview[0]+64
-panel_playerlist_y2 = view_yview[0]+64
+draw_set_alpha(1)
+panel_playerlist_x1 = 0
+panel_playerlist_y1 = 0
+panel_playerlist_x2 = 64
+panel_playerlist_y2 = 64
 
 draw_set_color(c_teal)
 draw_rectangle(panel_playerlist_x1,panel_playerlist_y1,

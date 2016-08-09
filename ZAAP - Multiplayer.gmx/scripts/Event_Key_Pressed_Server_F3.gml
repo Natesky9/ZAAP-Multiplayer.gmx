@@ -6,20 +6,20 @@ if Action == input_action.null
 
 if Action == input_action.create
     {
-    Action_Selection = entity.vortex
+    Action_Selection = entity.asteroid
+    console("Implimented!")
     exit
     }
 
 if Action == input_action.view
     {
-    show_vortex = !show_vortex
-    console("Toggled showing vortexes")
+    show_asteroid = !show_asteroid
+    console("Toggled showing asteroids")
     exit
     }
 
 if Action == input_action.delete
     {
-    console("Click on an entity to delete")
-    console("NYI")
+    Action_Selection = entity.asteroid
     exit
     }

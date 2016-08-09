@@ -1,7 +1,7 @@
 if nearest_ship == -1
     {
     //create a ship
-    Packet_Write(packet.entity_ship_create,mouse_x,mouse_y)
+    Packet_Write(packet.entity_create_ship,mouse_x,mouse_y,0)
     keyboard_string = ""
     exit
     }

@@ -3,23 +3,26 @@ if Action == input_action.null
     Action = input_action.view
     exit
     }
-
-if Action == input_action.create
-    {
-    Action_Selection = entity.asteroid
-    exit
-    }
     
 if Action == input_action.view
     {//if it is selected, toggle the sub-action
-    show_asteroid = !show_asteroid
-    console("Toggled showing asteroids")
+    show_projectile = !show_projectile
+    console("Toggled showing projectiles")
     exit
     }
+    
+if Action == input_action.create
+    {
+    Action_Selection = entity.projectile
+    console("NYI")
+    exit
+    }
+    
+
 
 if Action = input_action.delete
     {
-    console("click on an entity to delete")
+    Action_Selection = entity.projectile
     console("NYI")
     exit
     }

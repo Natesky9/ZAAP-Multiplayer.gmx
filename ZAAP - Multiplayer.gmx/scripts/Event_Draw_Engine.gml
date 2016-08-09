@@ -9,9 +9,7 @@ if window_has_focus()
         case "Client_Window":
             {
             Event_Draw_Engine_Client();
-            Event_Draw_Playerlist()
             Event_Draw_Entity()
-            Event_Draw_Ship_Gui()
             Event_Draw_Nearby_Ships()
             Event_Draw_Sketch()
             
@@ -21,7 +19,6 @@ if window_has_focus()
         case "Server_Window":
             {
             Event_Draw_Engine_Server();
-            Event_Draw_Playerlist()
             Event_Draw_Entity()
             Event_Draw_Sketch()
             
@@ -43,12 +40,10 @@ else
         case "Client_Window":
             {
             Event_Draw_Engine_Unfocused()
-            Event_Draw_Playerlist()
             exit
             }
         case "Server_Window":
             {
-            Event_Draw_Playerlist()
             Event_Draw_Entity()
             Event_Draw_Sketch()
             Event_Draw_Engine_Server();

@@ -1,0 +1,5 @@
+command_list = ds_list_create()
+ds_list_add(command_list,"clear")
+ds_list_add(command_list,"menu_create")
+ds_list_add(command_list,"list")
+ds_list_add(command_list,"edit_pause_text")

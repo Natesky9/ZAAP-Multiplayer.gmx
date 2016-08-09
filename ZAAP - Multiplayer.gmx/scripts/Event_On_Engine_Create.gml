@@ -1,4 +1,8 @@
+//keep track of how many data structures exist
+//--------------------------------//
 number_of_maps = 0
+number_of_lists = 0
+//--------------------------------//
 
 Define_Gravity_Behavior()
 
@@ -6,6 +10,8 @@ view_xview[0] = 0
 view_yview[0] = 0
 view_wview[0] = 640
 view_hview[0] = 640
+
+set_view_size()
 
 //Host object's create event
 lifetime = 0
@@ -30,21 +36,15 @@ mouse_vector_x = 0
 mouse_vector_y = 0
 pan_x = 0
 pan_y = 0
+
 draw_orbit = true
 draw_nearby_ships = false
-Action = input_action.null
-Action_Selection = entity.null
-Action_Selection_Entity = -1
 
-show_projectile = true
-show_object = true
-show_asteroid = true
-show_ship = true
-show_station = true
-show_star = true
-show_vortex = true
+Initialize_Action()
+
+show_entity_true()
 
 console("============")
-console("version .061")
+console("version .062")
 console("============")
 

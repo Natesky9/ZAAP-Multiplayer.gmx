@@ -8,7 +8,7 @@ switch mode
         if !is_undefined(get_instance)
             {
             Event_Destroy_Asteroid(get_instance)
-            Packet_Write(packet.entity_asteroid_destroy,get_instance)
+            Packet_Write(packet.entity_destroy_asteroid,get_instance)
             }
         if is_undefined(get_instance)
             {
@@ -22,7 +22,7 @@ switch mode
         if !is_undefined(get_instance)
             {
             var get_instance = ds_map_find_value(get_instance,"ssn")
-            Packet_Write(packet.entity_asteroid_destroy,get_instance)
+            Packet_Write(packet.entity_destroy_asteroid,get_instance)
             }
         if is_undefined(get_instance)
             {

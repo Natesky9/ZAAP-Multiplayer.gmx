@@ -3,22 +3,26 @@ if Action == input_action.null
     Action = input_action.create
     exit
     }
+    
+if Action == input_action.view
+    {
+    show_object = !show_object
+    console("Toggled showing objects")
+    exit
+    }    
+    
 if Action == input_action.create
     {
-    Action_Selection = entity.ship
+    Action_Selection = entity.object
+    console("Objects NYI")
     exit
     }
 
-if Action == input_action.view
-    {
-    show_ship = !show_ship
-    console("Toggled showing ships")
-    exit
-    }
+
 
 if Action == input_action.delete
     {
-    console("click on an entity to delete")
+    Action_Selection = entity.object
     console("NYI")
     exit
     }

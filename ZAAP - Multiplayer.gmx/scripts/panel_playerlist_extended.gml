@@ -3,11 +3,12 @@ var mode = ds_stack_top(menu_stack)
 var xoff
 
 panel_playerlist_x1 = 0
-panel_playerlist_y1 = 
+panel_playerlist_y1 = 0
 panel_playerlist_x2 = 192
 panel_playerlist_y2 = max(32*players,64)
 
 //draw the background
+draw_set_alpha(1)
 draw_set_color(c_teal)
 draw_rectangle(panel_playerlist_x1,panel_playerlist_y1,
 panel_playerlist_x2,panel_playerlist_y2,false)
