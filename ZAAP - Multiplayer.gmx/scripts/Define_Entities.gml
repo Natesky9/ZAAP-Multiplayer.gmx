@@ -7,6 +7,7 @@ enum entity
     asteroid,
     ship,
     station,
+    planet,
     star,
     vortex,
     }

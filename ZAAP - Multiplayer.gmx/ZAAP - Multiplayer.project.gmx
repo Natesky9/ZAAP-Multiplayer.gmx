@@ -33,13 +33,14 @@
       <scripts name="Create">
         <scripts name="Create Entity">
           <script>scripts\Event_Create_Entity.gml</script>
-          <script>scripts\Event_Create_Entity_Asteroid.gml</script>
-          <script>scripts\Event_Create_Entity_Star.gml</script>
-          <script>scripts\Event_Create_Entity_Ship.gml</script>
-          <script>scripts\Event_Create_Entity_Vortex.gml</script>
-          <script>scripts\Event_Create_Entity_Object.gml</script>
           <script>scripts\Event_Create_Entity_Projectile.gml</script>
+          <script>scripts\Event_Create_Entity_Object.gml</script>
+          <script>scripts\Event_Create_Entity_Asteroid.gml</script>
+          <script>scripts\Event_Create_Entity_Ship.gml</script>
           <script>scripts\Event_Create_Entity_Station.gml</script>
+          <script>scripts\Event_Create_Entity_Star.gml</script>
+          <script>scripts\Event_Create_Entity_Planet.gml</script>
+          <script>scripts\Event_Create_Entity_Vortex.gml</script>
         </scripts>
         <script>scripts\Event_On_Engine_Create.gml</script>
         <script>scripts\Event_Engine_Create_Data_Structures.gml</script>
@@ -96,6 +97,7 @@
             <script>scripts\Draw_Projectile.gml</script>
             <script>scripts\Draw_Vortex.gml</script>
             <script>scripts\Draw_Star.gml</script>
+            <script>scripts\Draw_Planet.gml</script>
             <script>scripts\Draw_Station.gml</script>
             <script>scripts\Draw_Object.gml</script>
           </scripts>
@@ -107,6 +109,7 @@
           <script>scripts\Event_Draw_Entity_Ship.gml</script>
           <script>scripts\Event_Draw_Entity_Station.gml</script>
           <script>scripts\Event_Draw_Entity_Star.gml</script>
+          <script>scripts\Event_Draw_Entity_Planet.gml</script>
           <script>scripts\Event_Draw_Entity_Vortex.gml</script>
         </scripts>
         <script>scripts\draw_input_action_panel.gml</script>
@@ -301,7 +304,7 @@
           <script>scripts\Star_Gravity.gml</script>
           <script>scripts\Vortex_Gravity.gml</script>
         </scripts>
-        <script>scripts\Asteroid_Orbit.gml</script>
+        <script>scripts\Orbit.gml</script>
         <script>scripts\Entity_Ship_Update_Clients.gml</script>
         <script>scripts\Gravitate.gml</script>
       </scripts>
@@ -333,14 +336,20 @@
       <script>scripts\create_sketch.gml</script>
       <script>scripts\vector_add.gml</script>
     </scripts>
-    <script>scripts\show_entity_true.gml</script>
     <scripts name="Actions">
       <script>scripts\Initialize_Action.gml</script>
       <script>scripts\Action_Delete.gml</script>
       <script>scripts\Action_Create.gml</script>
     </scripts>
+    <script>scripts\show_entity_true.gml</script>
     <script>scripts\set_view_size.gml</script>
-    <script>scripts\script246.gml</script>
+    <script>scripts\find_nearest.gml</script>
+    <script>scripts\choose_nearest.gml</script>
+    <script>scripts\Get_Primary.gml</script>
+    <script>scripts\Event_Draw_Debug_Entity_Primary.gml</script>
+    <script>scripts\Entity_Clear_Primary.gml</script>
+    <script>scripts\Event_Step_Entity_Gravity.gml</script>
+    <script>scripts\recursive_gravity.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>

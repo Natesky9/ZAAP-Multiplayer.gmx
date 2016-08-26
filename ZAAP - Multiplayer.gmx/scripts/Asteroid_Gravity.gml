@@ -1,5 +1,8 @@
 var get_entity = argument0
 
+//change this to use the primary instead of gravitating toward any list
+
+
 if asteroid_gravity_affects_asteroid
 Gravitate(get_entity,entity_asteroid_list)
 

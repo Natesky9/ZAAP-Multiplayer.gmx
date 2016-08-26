@@ -24,26 +24,9 @@ switch Action_Selection
     }
 
 
-if ds_list_size(get_list) == 0
+nearest = find_nearest(get_list,mouse_x,mouse_y,false,false)
+if is_undefined(nearest)
 exit
-
-var nearest = ds_list_find_value(get_list,0)
-var get_x = ds_map_find_value(nearest,"x")
-var get_y = ds_map_find_value(nearest,"y")
-var nearest_distance = point_distance(mouse_x,mouse_y,get_x,get_y)
-for (var i = 0; i < ds_list_size(get_list);i += 1)
-    {
-    var get_entity = ds_list_find_value(get_list,i)
-    var get_entity_x = ds_map_find_value(get_entity,"x")
-    var get_entity_y = ds_map_find_value(get_entity,"y")
-    var get_distance = point_distance(mouse_x,mouse_y,get_entity_x,get_entity_y)
-    
-    if get_distance < nearest_distance
-        {
-        nearest = get_entity
-        nearest_distance = get_distance
-        }
-    }
 
 switch Action_Selection
     {

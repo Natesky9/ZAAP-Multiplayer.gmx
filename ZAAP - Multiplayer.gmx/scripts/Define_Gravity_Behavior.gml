@@ -1,3 +1,5 @@
+Gravitational_Constant = 100
+
 //this sets the behavior for the gravity between entities
 
 projectile_gravity_affects_projectile = false
@@ -45,7 +47,7 @@ star_gravity_affects_object = true
 star_gravity_affects_asteroid = true
 star_gravity_affects_ship = true
 star_gravity_affects_station = true
-star_gravity_affects_star = true
+star_gravity_affects_star = false
 star_gravity_affects_vortex = false
 
 vortex_gravity_affects_projectile = true
@@ -54,4 +56,4 @@ vortex_gravity_affects_asteroid = true
 vortex_gravity_affects_ship = true
 vortex_gravity_affects_station = true
 vortex_gravity_affects_star = true
-vortex_gravity_affects_vortex = true
+vortex_gravity_affects_vortex = false

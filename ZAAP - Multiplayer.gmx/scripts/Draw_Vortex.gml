@@ -16,3 +16,5 @@ draw_circle(get_x,get_y,gravity_radius,true)
 draw_set_alpha(.1)
 draw_circle_color(get_x,get_y,vortex_radius,c_black,c_red,false)
 draw_set_alpha(1)
+
+
