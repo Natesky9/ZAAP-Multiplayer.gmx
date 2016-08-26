@@ -18,3 +18,8 @@ Event_Engine_Create_Entity_Lists()
 sketch_list = ds_list_create()
 console_text = ds_list_create()
 
+recursive_x = ds_stack_create()
+recursive_y = ds_stack_create()
+
+recursive_sum_x = 0
+recursive_sum_y = 0

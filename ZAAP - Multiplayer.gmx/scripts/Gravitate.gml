@@ -38,7 +38,7 @@ for (var j = get_size-1;j >= 0;j -= 1)
             {
             var get_body_mass = ds_map_find_value(get_body,"mass")
             var get_direction = point_direction(get_body_x,get_body_y,get_source_x,get_source_y)
-            var get_pull = 100*get_source_mass/sqr(get_distance)
+            var get_pull = Gravitational_Constant*get_source_mass/sqr(get_distance)
             vector_add(get_body,get_pull,get_direction,true)
             }
         //--------------------------------//

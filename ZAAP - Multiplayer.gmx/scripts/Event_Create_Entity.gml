@@ -4,39 +4,25 @@ switch type
     {
 //----------------------------------------------------------------//
     case entity.projectile:
-        {
-        return Event_Create_Entity_Projectile()
-        }
+        {return Event_Create_Entity_Projectile()}
 //----------------------------------------------------------------//
     case entity.object:
-        {
-        return Event_Create_Entity_Object()
-        }
+        {return Event_Create_Entity_Object()}
 //----------------------------------------------------------------//
     case entity.asteroid:
-        {
-        return Event_Create_Entity_Asteroid()
-        }
+        {return Event_Create_Entity_Asteroid()}
 //----------------------------------------------------------------//
     case entity.ship:
-        {
-        return Event_Create_Entity_Ship()
-        }
+        {return Event_Create_Entity_Ship()}
 //----------------------------------------------------------------//
     case entity.station:
-        {
-        return Event_Create_Entity_Station()
-        }
+        {return Event_Create_Entity_Station()}
 //----------------------------------------------------------------//
     case entity.star:
-        {
-        return Event_Create_Entity_Star()
-        }
+        {return Event_Create_Entity_Star()}
 //----------------------------------------------------------------//
     case entity.vortex:
-        {
-        return Event_Create_Entity_Vortex()
-        }
+        {return Event_Create_Entity_Vortex()}
 //----------------------------------------------------------------//
     default:
         {

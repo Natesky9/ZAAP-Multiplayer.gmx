@@ -12,7 +12,7 @@ switch Action
     case input_action.null:
         {
         get_text = "action.null"
-        draw_text(mouse_x,mouse_y,get_text)
+        draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0],get_text)
         
         break;
         }
@@ -20,7 +20,7 @@ switch Action
     case input_action.view:
         {
         get_text = "action.view"
-        draw_text(mouse_x,mouse_y,get_text)
+        draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0],get_text)
         
         draw_set_halign(fa_left)
         draw_set_valign(fa_top)
@@ -98,7 +98,7 @@ switch Action
     case input_action.create:
         {
         get_text = "action.create"
-        draw_text(mouse_x,mouse_y,get_text)
+        draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0],get_text)
         
         switch Action_Selection
             {
@@ -106,7 +106,7 @@ switch Action
             case entity.null:
                 {
                 get_text = "entity.null"
-                draw_text(mouse_x,mouse_y+32,get_text)
+                draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0]+32,get_text)
                 break
                 }
             //
@@ -115,7 +115,7 @@ switch Action
                 if !mouse_check_button(mb_left)
                     {
                     get_text = "entity.asteroid"
-                    draw_text(mouse_x,mouse_y+32,get_text)
+                    draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0]+32,get_text)
                     }
                 break
                 }
@@ -123,24 +123,25 @@ switch Action
             case entity.ship:
                 {
                 get_text = "entity.ship"
-                draw_text(mouse_x,mouse_y+32,get_text)
+                draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0]+32,get_text)
                 break
                 }
             //
             case entity.vortex:
                 {
                 get_text = "entity.vortex"
-                draw_text(mouse_x,mouse_y+32,get_text)
+                draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0]+32,get_text)
                 break
                 }
             }
         break
+        
         }
     //--------//
     case input_action.delete:
         {
         get_text = "action.delete"
-        draw_text(mouse_x,mouse_y,get_text)
+        draw_text((mouse_x-view_xview[0])*display_get_gui_width()/view_wview[0],(mouse_y-view_yview[0])*display_get_gui_height()/view_hview[0],get_text)
         break
         }
     //--------//

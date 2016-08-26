@@ -5,6 +5,7 @@ if pos != -1
     {
     show("Deleting vortex")
     ds_list_delete(entity_vortex_list,pos)
+    Entity_Clear_Primary(get_entity)
     destroy_map(get_entity)
     }
 else

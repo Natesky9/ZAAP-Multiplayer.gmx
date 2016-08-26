@@ -4,6 +4,7 @@ var text
 var get_x = ds_map_find_value(get_entity,"x")
 var get_y = ds_map_find_value(get_entity,"y")
 var get_mass = ds_map_find_value(get_entity,"mass")
+var get_primary = ds_map_find_value(get_entity,"primary")
 //----------------//
 
 

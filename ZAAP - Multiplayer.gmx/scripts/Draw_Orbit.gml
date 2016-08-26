@@ -8,7 +8,13 @@ var get_periapsis = ds_map_find_value(get_entity,"periapsis")
 var get_argument = ds_map_find_value(get_entity,"argument")
 var get_primary = ds_map_find_value(get_entity,"primary")
 
-if !get_primary
+if !is_undefined(get_primary)
+    {
+    if !ds_exists(get_primary,ds_type_map)
+    get_primary = undefined
+    }
+
+if is_undefined(get_primary)
 exit
 
 //draw the orbit info
