@@ -45,6 +45,6 @@ Initialize_Action()
 show_entity_true()
 
 console("============")
-console("version .062")
+console("version .082")
 console("============")
 

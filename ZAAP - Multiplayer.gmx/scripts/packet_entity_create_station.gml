@@ -33,7 +33,7 @@ switch packet_mode
         {
         server_read_position()
         //
-        Packet_Write(packet.entity_create_station,get_x,get_y,get_vector_direction,get_vector_speed)
+        Packet_Write(packet.entity_create_station,data.position,get_x,get_y,get_vector_direction,get_vector_speed)
         exit
         }
 //--------------------------------//

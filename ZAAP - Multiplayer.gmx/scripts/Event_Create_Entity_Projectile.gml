@@ -1,7 +1,7 @@
 //Creates a projectile and returns the number
 
 show("This is a projectile, it collides with things")
-get_entity = create_map()
+var get_entity = create_map()
 ds_map_add(get_entity,"x",get_x)
 ds_map_add(get_entity,"y",get_y)
 ds_map_add(get_entity,"type",entity.projectile)

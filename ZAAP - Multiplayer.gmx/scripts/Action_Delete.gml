@@ -38,25 +38,25 @@ switch Action_Selection
         }
     case entity.projectile:
         {Event_Destroy_Projectile(nearest);
-        Packet_Write(packet.entity_destroy_projectile,nearest);break}
+        Packet_Write(packet.entity_destroy_projectile,data.null,nearest);break}
     case entity.object:
         {Event_Destroy_Object(nearest);
-        Packet_Write(packet.entity_destroy_object,nearest);break}
+        Packet_Write(packet.entity_destroy_object,data.null,nearest);break}
     case entity.asteroid:
         {Event_Destroy_Asteroid(nearest);
-        Packet_Write(packet.entity_destroy_asteroid,nearest);break}
+        Packet_Write(packet.entity_destroy_asteroid,data.null,nearest);break}
     case entity.ship:
         {Event_Destroy_Ship(nearest);
-        Packet_Write(packet.entity_destroy_ship,nearest);break}
+        Packet_Write(packet.entity_destroy_ship,data.null,nearest);break}
     case entity.station:
         {Event_Destroy_Station(nearest);
-        Packet_Write(packet.entity_destroy_station,nearest);break}
+        Packet_Write(packet.entity_destroy_station,data.null,nearest);break}
     case entity.star:
         {Event_Destroy_Star(nearest);
-        Packet_Write(packet.entity_destroy_star,nearest);break}
+        Packet_Write(packet.entity_destroy_star,data.null,nearest);break}
     case entity.vortex:
         {Event_Destroy_Vortex(nearest);
-        Packet_Write(packet.entity_destroy_vortex,nearest);break}
+        Packet_Write(packet.entity_destroy_vortex,data.null,nearest);break}
     default:
         {
         console("Error, no type assigned! @Event_Left_Released")

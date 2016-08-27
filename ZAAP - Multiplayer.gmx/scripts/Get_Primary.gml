@@ -1,7 +1,10 @@
+
+
 //core loop for all entities
 for (var a = 0;a < ds_list_size(entity_list);a += 1)
     {//main step
     var get_list = ds_list_find_value(entity_list,a)
+    //
     for (var b = 0;b < ds_list_size(get_list);b += 1)
         {
         //
@@ -14,6 +17,7 @@ for (var a = 0;a < ds_list_size(entity_list);a += 1)
         //find the nearest bodies
         var nearest_vortex = find_nearest(entity_vortex_list,get_x,get_y,get_entity,true)
         var nearest_star = find_nearest(entity_star_list,get_x,get_y,get_entity,true)
+        //console("nearest star is: " + string(nearest_star))
         var nearest_planet = find_nearest(entity_planet_list,get_x,get_y,get_entity,true)
         
         //set to undefined for temp
@@ -91,26 +95,41 @@ for (var a = 0;a < ds_list_size(entity_list);a += 1)
         //--------------------------------//
         
         
+
         //--------------------------------//
-        //REMOVE
+        //if the primary isn't the same
         //--------------------------------//
-        if !is_undefined(nearest)
+        if get_primary  != nearest
+        && get_primary  != undefined
+        && nearest      != undefined
             {
-            var other_primary = ds_map_find_value(nearest,"primary")
-            if other_primary == get_entity
+            //--------------------------------//
+            //remove from old list
+            //--------------------------------//
+            var get_primary_satellite_list = ds_map_find_value(get_primary,"satellite_list")
+            var pos = ds_list_find_index(get_primary_satellite_list,get_entity)
+            
+            if !is_undefined(pos)
                 {
-                //if the other entity's primary points to this, make this a sole primary
-                ds_map_replace(get_entity,"primary",undefined)
-                exit
+                ds_list_delete(get_primary_satellite_list,pos)
                 }
+            //--------------------------------//
+            //end removing from old
+            //--------------------------------//
+            
+            
+            //--------------------------------//
+            //add to new list
+            //--------------------------------//
+            var get_nearest_satellite_list = ds_map_find_value(nearest,"satellite_list")
+            ds_list_add(get_nearest_satellite_list,get_entity)
             ds_map_replace(get_entity,"primary",nearest)
+            //--------------------------------//
+            //end add to new
+            //--------------------------------//
+            console("Changed from primary to primary")
+            //
             }
-        if is_undefined(nearest)
-            {//undefined event
-            }
-        //--------------------------------//
-        //remove?
-        //--------------------------------//
             
             
         
@@ -137,7 +156,13 @@ for (var a = 0;a < ds_list_size(entity_list);a += 1)
             var nearest_satellite_list = ds_map_find_value(nearest,"satellite_list")
             ds_list_add(nearest_satellite_list,get_entity)
             ds_map_replace(get_entity,"primary",nearest)
+            //--------------------------------//
+            //end adding to the new primary
+            //
+            console("Changed from null to primary")
+            //
             }
+            
         //
         if get_primary != undefined and nearest == undefined
             {//detect primary change from primary to no primary
@@ -151,6 +176,9 @@ for (var a = 0;a < ds_list_size(entity_list);a += 1)
             ds_list_add(null_primary_list,get_entity)
             ds_map_replace(get_entity,"primary",undefined)
             //search for second primary instead of leaving nearest undefined
+            //
+            console("Changed from primary to null")
+            //
             }
         //
         }

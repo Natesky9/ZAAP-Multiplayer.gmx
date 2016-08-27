@@ -29,7 +29,7 @@ switch packet_mode
             var get_current_controlled_entity = ds_map_find_value(entity_ship_controllers,get_sss)
             if !is_undefined(get_current_controlled_entity)
                 {//reset the previous ship's control to 0
-                Packet_Write(packet.entity_ship_set_control,get_current_controlled_entity,0)
+                Packet_Write(packet.entity_ship_set_control,data.null,get_current_controlled_entity,0)
                 //console("Resetting object: " + string(get_current_controlled_entity) + " to 0")
                 ds_map_replace(entity_ship_controllers,get_sss,get_entity)
                 }
@@ -37,7 +37,7 @@ switch packet_mode
                 {
                 ds_map_add(entity_ship_controllers,get_sss,get_entity)
                 }
-            Packet_Write(packet.entity_ship_set_control,get_entity,get_sss)
+            Packet_Write(packet.entity_ship_set_control,data.null,get_entity,get_sss)
             
             }
         if is_piloted

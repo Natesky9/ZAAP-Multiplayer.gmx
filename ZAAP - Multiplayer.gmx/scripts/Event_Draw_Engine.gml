@@ -11,6 +11,7 @@ if window_has_focus()
             Event_Draw_Engine_Client();
             Event_Draw_Entity()
             Event_Draw_Nearby_Ships()
+            Event_Draw_Ship_Gui()
             Event_Draw_Sketch()
             
             draw_asteroid_line()

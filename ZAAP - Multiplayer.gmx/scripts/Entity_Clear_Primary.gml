@@ -7,7 +7,7 @@ var get_satellite_list = ds_map_find_value(get_entity,"satellite_list")
 for (var i = 0;i < ds_list_size(get_satellite_list);i += 1)
     {
     var get_other_entity = ds_list_find_index(get_satellite_list,i)
-    if !is_undefined(get_other_entity)
+    if !is_undefined(get_other_entity) and ds_exists(get_other_entity,ds_type_map)
         {
         ds_map_replace(get_other_entity,"primary",undefined)
         }

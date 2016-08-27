@@ -17,4 +17,5 @@ draw_set_alpha(.1)
 draw_circle_color(get_x,get_y,vortex_radius,c_black,c_red,false)
 draw_set_alpha(1)
 
-
+var satellite_list = ds_map_find_value(get_entity,"satellite_list")
+draw_text(get_x,get_y-1000,"satellite number: " + string(ds_list_size(satellite_list)))

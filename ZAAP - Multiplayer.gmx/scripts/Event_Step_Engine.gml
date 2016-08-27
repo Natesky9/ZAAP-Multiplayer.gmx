@@ -12,6 +12,7 @@ switch mode
 //--------------------------------//
     case "Server_Window":
         {
+        Entity_Ship_Update_Clients()
         Event_Step_Entity();
         break
         }

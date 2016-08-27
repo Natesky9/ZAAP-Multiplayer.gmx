@@ -10,5 +10,6 @@ else
     {
     console("Error, Player not existed")
     }
-var get_player = ds_map_find_value(sss_map,get_sss)
-destroy_map(get_player)
+//var get_player = ds_map_find_value(sss_map,get_sss)
+
+destroy_map(get_sss)

@@ -96,3 +96,4 @@ get_text = "vortex"
 draw_text(get_width_11*9,48,get_text)
 //
 draw_set_alpha(1)
+

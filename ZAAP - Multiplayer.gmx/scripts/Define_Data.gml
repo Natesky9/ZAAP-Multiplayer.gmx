@@ -4,6 +4,7 @@ enum data
     packet_mode,
     packet_sss,
     packet_type,
+    packet_format,  //unused, placeholder only
     arg_1,
     arg_2,
     arg_3,

@@ -33,7 +33,7 @@ switch packet_mode
         {
         server_read_position()
         //
-        Packet_Write(packet.entity_create_asteroid,get_x,get_y,get_vector_direction,get_vector_speed)
+        Packet_Write(packet.entity_create_asteroid,data.position,get_x,get_y,get_vector_direction,get_vector_speed)
         exit
         }
 //--------------------------------//
@@ -42,9 +42,9 @@ switch packet_mode
         //
         async_position(async_packet)
     
+        var get_entity = Event_Create_Entity(entity.asteroid) 
         //
         server_write_position(async_packet)
-        var get_entity = Event_Create_Entity(entity.asteroid) 
         server_write_u8(get_entity)
         //
         server_send_packet_all()

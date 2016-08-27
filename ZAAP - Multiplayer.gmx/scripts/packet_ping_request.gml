@@ -12,7 +12,7 @@ switch packet_mode
         
         //if Ping != Ping_Previous
         //    {
-            Packet_Write(packet.ping_tell,Ping)
+            Packet_Write(packet.ping_tell,data.null,Ping)
         //    }
         exit
         }
@@ -28,7 +28,7 @@ switch packet_mode
         {
         var get_sss = async_packet[data.packet_sss]
         var get_ping = buffer_read(server_bin,buffer_u32)
-        Packet_Write(packet.ping_request,get_sss,get_ping)
+        Packet_Write(packet.ping_request,data.null,get_sss,get_ping)
         exit
         }
 //--------------------------------//

@@ -9,12 +9,12 @@ switch mode
     {
     case "Client_Window":
         {
-        Packet_Write(packet.chat_send,text)
+        Packet_Write(packet.chat_send,data.null,text)
         exit
         }
     case "Server_Window":
         {
-        Packet_Write(packet.chat_broadcast,text)
+        Packet_Write(packet.chat_broadcast,data.null,text)
         exit
         }
     default:

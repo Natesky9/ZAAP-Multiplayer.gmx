@@ -8,7 +8,7 @@ switch mode
         }
     case "Server_Window":
         {
-        Packet_Write(packet.kick,data.all_connected)
+        Packet_Write(packet.kick,data.null,data.all_connected)
         exit
         }
     default:

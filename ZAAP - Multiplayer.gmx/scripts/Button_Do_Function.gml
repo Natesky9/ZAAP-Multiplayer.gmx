@@ -68,7 +68,10 @@ switch get_function
         if is_ip(ip)
             {
             if Client_Connect(ip)
-            ds_stack_push(menu_stack,"Client_Window")
+                {
+                ds_stack_push(menu_stack,"Client_Window")
+                console("Joined IP")
+                }
             }
         else
             {

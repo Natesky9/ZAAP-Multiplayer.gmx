@@ -10,12 +10,12 @@ switch packet_mode
         for (i = 0;i < size;i += 1)
             {
             var get_entity = buffer_read(client_bin,buffer_u8)
-            var get_x = buffer_read(client_bin,buffer_f32)
-            var get_y = buffer_read(client_bin,buffer_f32)
-            var get_vector_direction = buffer_read(client_bin,buffer_f32)
-            var get_vector_speed = buffer_read(client_bin,buffer_f32)
+            get_x = buffer_read(client_bin,buffer_f32)
+            get_y = buffer_read(client_bin,buffer_f32)
+            get_vector_direction = buffer_read(client_bin,buffer_f32)
+            get_vector_speed = buffer_read(client_bin,buffer_f32)
             //
-            var new_entity = Event_Create_Entity(entity.vortex,get_x,get_y)
+            var new_entity = Event_Create_Entity(entity.vortex)
             //
             ds_map_replace(new_entity,"vector_direction",get_vector_direction)
             ds_map_replace(new_entity,"vector_speed",get_vector_speed)
@@ -48,10 +48,10 @@ switch packet_mode
         for (i = 0;i < size;i += 1)
             {
             var get_entity = ds_list_find_value(entity_vortex_list,i)
-            var get_x = ds_map_find_value(get_entity,"x")
-            var get_y = ds_map_find_value(get_entity,"y")
-            var get_vector_direction = ds_map_find_value(get_entity,"vector_direction")
-            var get_vector_speed = ds_map_find_value(get_entity,"vector_speed")
+            get_x = ds_map_find_value(get_entity,"x")
+            get_y = ds_map_find_value(get_entity,"y")
+            get_vector_direction = ds_map_find_value(get_entity,"vector_direction")
+            get_vector_speed = ds_map_find_value(get_entity,"vector_speed")
             
             buffer_write(server_bout,buffer_u8,get_entity)
             buffer_write(server_bout,buffer_f32,get_x)

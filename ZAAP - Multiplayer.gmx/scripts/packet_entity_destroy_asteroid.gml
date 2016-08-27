@@ -25,7 +25,7 @@ switch packet_mode
         {
         var get_entity = buffer_read(server_bin,buffer_u8)
         Event_Destroy_Asteroid(get_entity)
-        Packet_Write(packet.entity_destroy_asteroid,get_entity)
+        Packet_Write(packet.entity_destroy_asteroid,data.null,get_entity)
         exit
         }
 //--------------------------------//

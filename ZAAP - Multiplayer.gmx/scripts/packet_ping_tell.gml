@@ -33,7 +33,7 @@ switch packet_mode
         var get_ping = buffer_read(server_bin,buffer_u8)
         var get_map = ds_map_find_value(sss_map,get_sss)
         ds_map_replace(get_map,"Ping",get_ping)
-        Packet_Write(packet.ping_tell,get_sss,get_ping)
+        Packet_Write(packet.ping_tell,data.null,get_sss,get_ping)
         exit
         }
 //--------------------------------//

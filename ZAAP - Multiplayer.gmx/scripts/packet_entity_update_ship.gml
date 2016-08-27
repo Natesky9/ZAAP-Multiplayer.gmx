@@ -46,20 +46,20 @@ switch packet_mode
         //replace this with server_write at the same time to fill with 1 arg
         var get_entity = buffer_read(server_bin,buffer_u32)
         
-        Packet_Write(packet.entity_update_ship,get_entity)
+        Packet_Write(packet.entity_update_ship,data.null,get_entity)
         exit
         }
 //--------------------------------//
     case data.server_write:
         {
         //possibly replace this with 1 argument, and fill in this script
-        var get_entity = async_packet[data.arg_1]
-        var get_x = ds_map_find_value(get_entity,"x")
-        var get_y = ds_map_find_value(get_entity,"y")
-        var get_controller = ds_map_find_value(get_entity,"Controller")
-        var get_direction = ds_map_find_value(get_entity,"direction")
-        var get_vector_direction = ds_map_find_value(get_entity,"vector_direction")
-        var get_vector_speed = ds_map_find_value(get_entity,"vector_speed")
+        var get_entity = async_packet[data.arg_1];
+        var get_x = ds_map_find_value(get_entity,"x");
+        var get_y = ds_map_find_value(get_entity,"y");
+        var get_controller = ds_map_find_value(get_entity,"Controller");
+        var get_direction = ds_map_find_value(get_entity,"direction");
+        var get_vector_direction = ds_map_find_value(get_entity,"vector_direction");
+        var get_vector_speed = ds_map_find_value(get_entity,"vector_speed");
         //console("Sending entity to be read by client " + string(get_entity))
         
         buffer_write(server_bout,buffer_u32,get_entity)

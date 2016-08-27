@@ -10,9 +10,12 @@ switch packet_mode
         for (i = 0;i < size;i += 1)
             {
             var get_entity = buffer_read(client_bin,buffer_u8)
-            var get_x = buffer_read(client_bin,buffer_f32)
-            var get_y = buffer_read(client_bin,buffer_f32)
-            var new_entity = Event_Create_Entity(entity.ship,get_x,get_y)
+            get_x = buffer_read(client_bin,buffer_f32)
+            get_y = buffer_read(client_bin,buffer_f32)
+            get_direction = buffer_read(client_bin,buffer_f32)
+            get_vector_direction = buffer_read(client_bin,buffer_f32)
+            get_vector_speed = buffer_read(client_bin,buffer_f32)
+            var new_entity = Event_Create_Entity(entity.ship)
             //
             ds_map_add(new_entity,"ssn",get_entity)
             ds_map_add(ssn_map,get_entity,new_entity)
@@ -43,12 +46,18 @@ switch packet_mode
         for (i = 0;i < size;i += 1)
             {
             var get_entity = ds_list_find_value(entity_ship_list,i)
-            var get_x = ds_map_find_value(get_entity,"x")
-            var get_y = ds_map_find_value(get_entity,"y")
+            get_x = ds_map_find_value(get_entity,"x")
+            get_y = ds_map_find_value(get_entity,"y")
+            get_direction = ds_map_find_value(get_entity,"direction")
+            get_vector_direction = ds_map_find_value(get_entity,"vector_direction")
+            get_vector_speed = ds_map_find_value(get_entity,"vector_speed")
             
             buffer_write(server_bout,buffer_u8,get_entity)
             buffer_write(server_bout,buffer_f32,get_x)
             buffer_write(server_bout,buffer_f32,get_y)
+            buffer_write(server_bout,buffer_f32,get_direction)
+            buffer_write(server_bout,buffer_f32,get_vector_direction)
+            buffer_write(server_bout,buffer_f32,get_vector_speed)
             //add load functions here
             }
         server_send_packet(get_sss)

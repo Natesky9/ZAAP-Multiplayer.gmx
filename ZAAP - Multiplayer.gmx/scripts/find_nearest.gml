@@ -32,6 +32,7 @@ nearest = ds_list_find_value(get_list,0)
 get_x = ds_map_find_value(nearest,"x")
 get_y = ds_map_find_value(nearest,"y")
 nearest_distance = point_distance(point_x,point_y,get_x,get_y)
+
 for (var i = 0; i < ds_list_size(get_list);i += 1)
     {
     get_entity = ds_list_find_value(get_list,i)
@@ -44,7 +45,7 @@ for (var i = 0; i < ds_list_size(get_list);i += 1)
         
         if get_distance < nearest_distance
         and get_distance < get_entity_mass
-        or !point_in_gravity
+        //or !point_in_gravity)
             {
             nearest = get_entity
             nearest_distance = get_distance
@@ -55,8 +56,10 @@ if nearest == blacklist
 return undefined
 
 var nearest_mass = ds_map_find_value(nearest,"mass")
-if get_distance < nearest_mass
-or !point_in_gravity
-return nearest
+if nearest_distance < nearest_mass
+    {
+    //console("true")
+    return nearest
+    }
 
 return undefined

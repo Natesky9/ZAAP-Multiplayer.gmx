@@ -6,6 +6,7 @@ show("Set packet_mode to " + string(async_packet[data.packet_mode]))
 var packet_type = argument[0];
 async_packet[data.packet_type] = packet_type
 
+
 var packet_format = argument[1]
 
 switch packet_format

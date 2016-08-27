@@ -10,7 +10,7 @@ switch packet_mode
         client_read_position()
         var get_entity = client_read_u8()
         //
-        var new_entity = Event_Create_Entity(entity.asteroid)
+        var new_entity = Event_Create_Entity(entity.ship)
         //
         ds_map_add(new_entity,"ssn",get_entity)
         ds_map_add(ssn_map,get_entity,new_entity)
@@ -33,7 +33,7 @@ switch packet_mode
         {
         server_read_position()
         //
-        Packet_Write(packet.entity_create_ship,get_x,get_y,get_vector_direction,get_vector_speed)
+        Packet_Write(packet.entity_create_ship,data.position,get_x,get_y,get_vector_direction,get_vector_speed)
         exit
         }
 //--------------------------------//

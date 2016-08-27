@@ -10,12 +10,12 @@ switch packet_mode
         for (i = 0;i < size;i += 1)
             {
             var get_entity = buffer_read(client_bin,buffer_u8)
-            var get_x = buffer_read(client_bin,buffer_f32)
-            var get_y = buffer_read(client_bin,buffer_f32)
-            var get_vector_direction = buffer_read(client_bin,buffer_f32)
-            var get_vector_speed = buffer_read(client_bin,buffer_f32)
+            get_x = buffer_read(client_bin,buffer_f32)
+            get_y = buffer_read(client_bin,buffer_f32)
+            get_vector_direction = buffer_read(client_bin,buffer_f32)
+            get_vector_speed = buffer_read(client_bin,buffer_f32)
             //
-            var new_entity = Event_Create_Entity(entity.station,get_x,get_y)
+            var new_entity = Event_Create_Entity(entity.station)
             //
             ds_map_replace(new_entity,"vector_direction",get_vector_direction)
             ds_map_replace(new_entity,"vector_speed",get_vector_speed)

@@ -15,7 +15,7 @@ switch mode
                 if !is_undefined(get_sss)
                     {
                     console("Kicking Player[" + string(get_sss) + "]")
-                    Packet_Write(packet.kick,get_sss)
+                    Packet_Write(packet.kick,data.null,get_sss)
                     }
                 }
             exit;

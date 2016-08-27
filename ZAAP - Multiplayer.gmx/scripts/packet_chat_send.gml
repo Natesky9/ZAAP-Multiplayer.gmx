@@ -26,7 +26,7 @@ switch packet_mode
         var text = buffer_read(server_bin,buffer_string)
         console("Player [" + string(get_sss) + "]: " + text)
         
-        Packet_Write(packet.chat_send,get_sss,text) 
+        Packet_Write(packet.chat_send,data.null,get_sss,text) 
         
         exit
         }

@@ -99,7 +99,7 @@ switch packet_mode
         {
         var get_entity = buffer_read(server_bin,buffer_u32)
         var get_action = buffer_read(server_bin,buffer_u8)
-        Packet_Write(packet.entity_ship_action,get_entity,get_action)
+        Packet_Write(packet.entity_ship_action,data.null,get_entity,get_action)
         exit
         }
 //--------------------------------//

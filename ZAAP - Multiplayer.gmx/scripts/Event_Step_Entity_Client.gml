@@ -1,7 +1,7 @@
 //request ping
 if !((lifetime) mod 30) and (SSS != -1)
     {
-    Packet_Write(packet.ping_request)
+    Packet_Write(packet.ping_request,data.null)
     }
 //end request ping
 

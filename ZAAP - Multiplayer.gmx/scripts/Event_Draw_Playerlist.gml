@@ -1,6 +1,6 @@
 
 if keyboard_check(ord('~'))
-or point_in_rectangle(mouse_x,mouse_y,
+or point_in_rectangle(window_mouse_get_x(),window_mouse_get_y(),
 panel_playerlist_x1,panel_playerlist_y1,
 panel_playerlist_x2,panel_playerlist_y2)
     {
