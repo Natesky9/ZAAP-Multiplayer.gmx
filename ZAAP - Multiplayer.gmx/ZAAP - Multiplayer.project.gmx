@@ -350,6 +350,9 @@
     <script>scripts\Entity_Clear_Primary.gml</script>
     <script>scripts\Event_Step_Entity_Gravity.gml</script>
     <script>scripts\recursive_gravity.gml</script>
+    <script>scripts\Event_Key_Pressed_Server_G.gml</script>
+    <script>scripts\get_velocity_for_circular_orbit.gml</script>
+    <script>scripts\get_perpendicular_angle.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>

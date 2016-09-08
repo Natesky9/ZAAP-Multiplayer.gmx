@@ -20,6 +20,9 @@ if letter_was_pressed('N')
 if letter_was_pressed('O')
     {Event_Key_Pressed_Server_O();exit}
 //
+if letter_was_pressed('G')
+    {Event_Key_Pressed_Server_G();exit}
+//
 if keyboard_check_pressed(vk_escape)
     {Event_Key_Pressed_Server_Escape();exit}
 //
